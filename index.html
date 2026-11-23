@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f6f2">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Meal Plan">
+<title>Meal Plan</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2352734a'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='54' fill='%23ffffff'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAMXElEQVR4nOzdXUxb5xkH8APBX2BsjnFtSGe2waBWa6NJ9kUQDEuBKJIjpbWlREHdRXrR0otFVVVp7SYlF53WbTerovai2SoVTauoilTSSfUUFZDCsMiFfYOtjgSFVpgltUvtmRjwB9Aa0lbhcB5zQs05r8n/d1FFPqdtgP953/e8Hw81DSYzByCmhgMgIBxAQjiAhHAACeEAEsIBJIQDSAgHkBAOICEcQEI4gIRwAAnhABLCASSEA0gIB5AQDiAhHEBCOICEcAAJ4QASwgEkhANICAeQEA4gIRxAQjiAhHAACeEAEsIBJIQDSAgHkBAOICEcQEI4gIRwAAnhABLCASSEA0gIB5AQDiAhHEBCOICEcACp3OGwNVy83tFlJK/nI7FXT9+9ucztSdVuunjtF+4S/6nQ5785/dVibuenGvXT/+ocdFdzP0Lyk1sXnv9/Kifp5p8Mdvz1jQY9dXkhcfH0F+EYJ03VE3988s0X60Su3Lrz8slFKd+3MvpR38R9UDvNJ3qOSLixyua1dBo51mm0Lr9BX+KGloZ+t4qrTHKHg+N0x87V85q97rLU9p8zqDnWqRz1Hkfp76Ha6avb++tlkvzh4Ew9lmPtVaXv4bstvR0c84rN22Ot2j1uMvU85mrhKpEC4eCMhhM+XammVqNyDfAmjnkGXW+ffu/mzVjf262uxK5FiXBw1Xav2W4hL6scDd7uCniNqnOaupxSbqzp9BmsFdizKPQz6DB5u+9GRgti16rsfot9r7Z6HzJTsbevZFYk3JlfWM3s/apypNXH2zhJ1G6zq/3rxeg3XEVR6gFVuwbqLYFkYvfPwGbo99ZxByCfWI0E7qW4MikOmft0Um/W6j19mkA0W+AqiSLdyhZ9d5PHITIstfRZuiph+Ma7GzvF/p7Jqa9m07s/rrb7+FYDV1nkCkd65XZ85ydaff9ArbCJMGi7BoyCaYPMrUySY4xG9YTPaBW5kAsPxQOhdZErWwOUPd7RWCNXOLLZyUAmv/MzW5/FubPTrnPyXuHkZi4cyJStLygXS92JbrER5kJ6Mrg2E7iXEblW1+WrPZD+8sDIFY7cRmw0MSNob1v4E30PvuMdsQ9YhEO8SCIQZK6ntnQ/5hRrN+LBr2cT36SK/xTpWYoPQ2Mr/Y7GIPnGHIWF9NiUoO2ocQ0Yrd/3xKr2eq9X8DhuzgynFnObHFM06k5/vdiUeW4msLqy9ZXemxTtWVr4freUpQNWyPi2kiuEh5LxU00PPnJqt6XfuTQULL7jVVmPN7kEiynpdGAimzGUZ4nF5H/ifb+E+27FXj5ZamlQ1W7oF52GKfYpoY2tP+QKWz1LH78rQBqXT8+PpyUu6SlO1reVldDS9YigGajzDOi3emKDrn9AuJgSDyQiCxxjqqx9ZtFpmO0+5bs/Uz2LqdvsrJyeRd5X2eW1seFlQddiPW5xtVfxPWaPcLZxZXo4w9xDZtB0eUWnzL/rU+4rLGTEexZrvae7YmbSZZ7n+GZxIhEWvNNaea9X7zpnEozw8qGlscgGxxhVu7FXdBn2hz7lvlyeeGdRO/31lgqZSpd9EmzuXmBC0BpUd77Uev6U4GlcLw5FY/LubZGgqtVvbhPtU0Kp+cSOT6ieRd9dnEqvjAkP+WdIN2aHE7cFnxk1wjXYeCownmfvFbbWc1x0qiI3MyqcjCn2LNOiPYvW4OnWVETXosDaykokNRZ6vK3kTr5YcSgqdWudVFIX3tLZeaLFqnM0donuMokvT+7uAXP5sPg7S7Xdb7QNk/8Xdiix8LacnR5OP+vmyd112czY8KqU5dOH8qMX3o7Y/bzY1BeXDCYFfcp9qWBqNs3v3gardjS62hPzYdYXaZVZlU2MJ6YX+BPEAlsmlJhmcHXbpu8/Lj6SlDqD8gOtvtevC4TL/wCUl0KrsrHM2Dj1ncmHh9OL7E0T8W6T6JT5/rQdN7G/SKvUkn1xWLo0mxW7spAcm2Bv24NG5fQZy7lzsYP3MD+Vrth+jkI09WlQZDB/+6OlmQTHGlVLfX9PeTfD61x+1hdpFQtHcTB/Yzgl3KiRXR4bXWNwu5S122wv9yEa63GzU+I2Q4UouY83FYx/PK7rt1U98MndybmDGoqqLbVO76akMWB2IxZaTfzwqqlRu3wlTy7tj9XocatuxKQ9C0advc+ol7RAvZmKrM7HyvBtVHSTd2J15OxnI5xM9D2213qk3ZrNvHf6vyPfv2qqHMWfomgTu3b1zGd/m9hrjl+jOvb3py6d2t0rbZ93Ckg7d2nlB9/lOUnWQ69E/zBUhilE5bqVikGfXLqVmo5KWP3JFW6OpkV3OjJ+3gnh2MvWyaVa0bFoLJialzZ2ToWSkbjYBbbPOyEce9g+uST6XVoJj0qexUpkrgdFO4+aTp+R2fNOCEdp9MmlW+nrEcmDvtzGzcCyaM+idje6HIwu0iIcJRWXYYmTS7cnkosPs3JW7FnCoj2LVu/xMrpIW9VgMnMAYlD2CUgIB5AQDiAhHEBCOICEcAAJ4QDSAYWDLrYqKrueTBdSsex8ZHk2eC88/sByuSi6Em3yo5sXnk+XsWRDOWvQli6gG7nz8umSZWgNdS9ce+qZ3dvfs8tvnZz9d5QrOzZmSLU1Jquuzc2feO6nF951DH3+y7f+0XyMhUllOWvQOs1n/WwtwrE5fa5uO2W7dM3x6qDCG+nkrUGr7hq02Fk6Zs3w2opW53nDfvElBfMhew3aDssZL0ONB+MLbzWdl9pf8Cq0S1uBGrQ17sEmdhoP9ldlNZ6XzIoc8VCmBm2H+VmflpHGQ/ZXWcGvhtAc4ds1rQ7j06/a3ETjrHZbvO6ltydkLsegVA3ams4XmzpHvwgzcD5D6ZYjt5GKroY/uHvpZPS9qXXiJp3Tq5V75PHwNWjL9ri3mM8MMNF4MNOtJFavvh4TPwPHcXy7rk7evXSK1qCt7jzf5GLgSAtDY47C3L3pqPi5DL1FpZczHIrXoG0pznko33iwNCDNbcTjRM+i1fAHUCqfJHcN2s2MsMmstg82K954MPa2QiVAU6WSseWQvQZtbnroa+H2Y2vj2fO1yjYeLIVDo2q1EdMKxZWXNCcTBWrQbq4Ev/w4JOhSq+0DzV3tnIIYCked0+gifnVXJrYqW81JqTVoRe7YrkG7rxYun86OXV4S7k63Np45r+QCAjPhsNR6f9vcJn5tczEiWziUqkG7mZr68uqul/k2X7NLucaDgXAUXw3ONb9+zfFcDzUjl5sNFmSqy6BgDdrl7OQVkcbj2fN1SjUess+Qdhx98/OjD/Vv5EOJsZBM06MPV4NWpFLgdg3aUbHfQCVBavzLD6fMF3Y+JLaBo11Dc2NznPyYX1vJLr//ekKuqoxK16DN5ScvJ4Q7h4z8mcF6RRoPxsORu/7K/NWgXJUFGahBuxJMjIwLqsNzNn9zrxJbnxgOR3bt+u9vvv2BfHWM91ODVuTu7Rq0+55Kz+WnLy/tqvDccPZFvazTgNvYDMdmfOrOn09G/3IlK2Olzv3VoBX5fLsG7f4f9JVQfOQTYeNh9T3e65D7h8XU7vP1eGR1Ppr69J2lG1GZF+hZqkGbK4SvxG/32XaMfrSGZ85nZuVtPJTez8GMA6hBuxrZ75e5EloaGbe+trOMmPVUk8zDUtTn2MZaDdpcYfry3V0bGKrLX9GwJIRjC4M1aAvR5IcBhYt8IxxbWKxBWxx5vHOH2v0kj8N2HHI/lWhZqEErZqvxGD16aUCxenKHLRz7qETLRA1aUbmNYuMx4/15Z7lbNYnQrTBdg7bYeIwE1jiFPPLhYL0G7cbMO3dDsm102ulRDwf7NWgL0dTIR8r8SqdHPBwVUYN2Y/aKMo3Hox0OvjJq0BbmUiPDCjQeKFILJJR9AhLCASSEA0gIB5AQDiAhHEBCOICEcAAJ4QASwgEkhANICAeQEA4gHeZw/Opp069/97itXXI50YcUm1v755/+95+Pk9whdZiX7K/ccB5cMu4r5mPwWIQ7pNCtAOmIVlfLHVLpr9Z/9qTO2HhQ9RrvdysLNxXbHX7QsBMMSOhWgIRwAAnhABLCASSEA0gIB5AQDiAhHEBCOICEcAAJ4QASwgEkhANICAeQEA4gIRxAQjiAhHAACeEAEsIBJIQDSAgHkBAOICEcQEI4gIRwAAnhABLCASSEA0gIB5AQDiAhHEBCOICEcAAJ4QASwgEkhANICAeQEA4gIRxAQjiAhHAA6VsAAAD//w2HyG0AAAAGSURBVAMAIamJGm9mH6IAAAAASUVORK5CYII=">
+<style>
+  /* No external fonts — this app must work with zero network connectivity.
+     System font stacks are chosen to read close to the original design
+     (condensed/bold headers, monospace labels) without ever fetching anything. */
+  :root{
+    --bg:#f7f6f2; --card:#ffffff; --card2:#f0efe8; --panel2:#eae8df;
+    --border:#e2e0d5; --border-hover:#c7c4b4;
+    --text:#24271f; --text2:#5b5f52; --text3:#75786a; --text4:#9b9d8e;
+    --lime:#52734a; --blue:#3f6f8f; --pink:#a15577; --orange:#9c6a1f; --red:#b23b3b;
+    --mono:ui-monospace,'SF Mono','Menlo','Consolas','Roboto Mono',monospace;
+    --cond:-apple-system,'SF Pro Condensed','Roboto Condensed','Arial Narrow',system-ui,sans-serif;
+    --body:-apple-system,'SF Pro Text',system-ui,'Segoe UI',Roboto,sans-serif;
+  }
+  html,body{ margin:0; padding:0; background:var(--bg); }
+  *{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+  body{ font-family:var(--body); color:var(--text); }
+  ::selection{ background:var(--lime); color:#fff; }
+  input::placeholder{ color:var(--text4); }
+  input{ font-family:inherit; }
+  input:focus{ outline:none; border-color:var(--lime) !important; box-shadow:0 0 0 3px rgba(82,115,74,0.16); }
+  button{ font-family:inherit; -webkit-user-select:none; user-select:none; }
+  ::-webkit-scrollbar{ width:10px; height:10px; }
+  ::-webkit-scrollbar-track{ background:#f0efe8; }
+  ::-webkit-scrollbar-thumb{ background:#d3d0c2; border-radius:6px; }
+  @keyframes trayUp{ from{ transform:translateY(100%); } to{ transform:translateY(0); } }
+  @keyframes fadeSlideIn{ from{ opacity:0; transform:translateY(-4px); } to{ opacity:1; transform:translateY(0); } }
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; transition-duration:0.001ms !important; }
+  }
+
+  a{ color:inherit; }
+
+  /* Smoothness: every tappable thing gets a quick, consistent response instead
+     of the default (and on iOS, ugly) tap-flash, plus a subtle press-down. */
+  button, .card, .chip-btn, .tab-btn, .qty-btn, .sample-btn, .calc-food-row{
+    transition:border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease, transform 0.1s ease, opacity 0.15s ease, box-shadow 0.18s ease;
+  }
+  button:active, .qty-btn:active{ transform:scale(0.95); }
+  .card:active{ transform:scale(0.995); }
+  .recipe-fade{ animation:fadeSlideIn 0.18s ease; }
+
+  .hover-border:hover{ border-color:var(--border-hover) !important; }
+  .hover-lime:hover{ border-color:var(--lime) !important; }
+  .hover-blue:hover{ border-color:var(--blue) !important; }
+  .hover-orange:hover{ border-color:var(--orange) !important; }
+  .hover-pink:hover{ border-color:var(--pink) !important; }
+  .hover-lime-text:hover{ border-color:var(--lime) !important; color:var(--lime) !important; }
+  .hover-red:hover{ border-color:var(--red) !important; color:var(--red) !important; }
+  .hover-lime-fill{ box-shadow:0 2px 8px rgba(82,115,74,0.14); }
+  .hover-lime-fill:hover{ background:#435f3c !important; box-shadow:0 4px 14px rgba(82,115,74,0.22); transform:translateY(-1px); }
+  .hover-step:hover{ border-color:var(--lime) !important; }
+  .card-action-btn:hover{ color:var(--text) !important; background:var(--card2) !important; }
+
+  .tab-btn{ cursor:pointer; position:relative; background:none; border:none; padding:8px 4px; margin-right:14px; font-family:var(--cond); font-size:22px; font-weight:600; text-transform:uppercase; letter-spacing:0.02em; }
+  .chip-btn{ cursor:pointer; align-self:center; border-radius:20px; padding:6px 13px; margin-right:8px; font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; }
+  .card{ background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 1px 2px rgba(0,0,0,0.04), 0 10px 24px -16px rgba(0,0,0,0.10); }
+  .macro-chip{ flex:1; background:var(--card2); border-radius:8px; padding:8px 10px; text-align:center; }
+  .tag-chip{ font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--text2); border:1px solid var(--border); padding:3px 8px; border-radius:20px; }
+  .qty-btn{ cursor:pointer; width:30px; height:30px; border-radius:8px; background:var(--card2); border:1px solid var(--border); color:var(--text); font-size:18px; line-height:1; }
+  .calc-food-row{ background:var(--card2); border:1px solid var(--border); border-radius:10px; }
+
+  [style*="border-radius:16px; overflow:hidden;"]{ box-shadow:0 1px 2px rgba(0,0,0,0.04), 0 12px 28px -18px rgba(0,0,0,0.10); }
+  #scoreboardContainer{ box-shadow:0 -10px 22px -12px rgba(0,0,0,0.08); }
+
+  .sb-mobile{ display:none; }
+
+  @media (hover:hover){
+    .card:hover{ border-color:var(--border-hover); box-shadow:0 2px 6px rgba(0,0,0,0.05), 0 18px 36px -18px rgba(0,0,0,0.12); transform:translateY(-2px); }
+    .tab-btn:hover{ color:var(--lime) !important; }
+    .chip-btn:hover{ filter:brightness(0.94); }
+    .calc-food-row:hover{ border-color:var(--border-hover); background:#e9e7dd; }
+  }
+
+  @media (max-width: 640px){
+    header{ padding:26px 18px 10px !important; }
+    header h1{ font-size:clamp(30px, 11vw, 46px) !important; }
+    header > div:nth-of-type(1){ font-size:10px !important; margin-bottom:10px !important; }
+    header p{ font-size:14.5px !important; margin-top:12px !important; }
+    section, main, #controlsBar{ padding-left:18px !important; padding-right:18px !important; }
+    main{ padding-top:6px !important; padding-bottom:24px !important; }
+    main #gridWrapper > div[style*="grid-template-columns"]{ grid-template-columns:1fr !important; gap:12px !important; }
+    #searchInput{ width:100% !important; flex:1 1 100%; }
+    #tabsCollectionsRow{ gap:4px !important; }
+    .tab-btn{ font-size:18px !important; margin-right:10px !important; }
+    .chip-btn{ font-size:10px !important; padding:5px 10px !important; }
+
+    /* Cards: trim the oversized display type down to something that reads
+       calm on a phone instead of shouting. */
+    .card h3{ font-size:19px !important; }
+    .pp-card-protein{ font-size:30px !important; }
+    .pp-card-macro-num{ font-size:16px !important; }
+    .card > div:first-child{ padding:16px 16px 14px !important; }
+
+    /* Footer: swap the roomy desktop scoreboard for the compact single-column one. */
+    .sb-desktop{ display:none !important; }
+    .sb-mobile{ display:block !important; }
+  }
+
+  @page{ size:letter; margin:0.5in; }
+  @media print{
+    [data-noprint]{ display:none !important; }
+    html, body{ background:#fff !important; }
+    [data-binder]{ display:block !important; }
+    [data-binder], [data-binder] *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="app" data-noprint style="min-height:100vh; background:var(--bg); padding-bottom:calc(120px + env(safe-area-inset-bottom, 0px));"></div>
+
+<script>
+// This file no longer ships a recipe library — Edward logs individual
+// weighed foods through the Custom Meal Calculator's food database
+// (CALC_FOODS) below instead of following fixed recipes. The recipe
+// library and the Lift/Run day split were both removed on 2026-11-23.
+</script>
+<script>
+// The Protein Playbook — interactive tracker (real implementation of Protein Playbook.dc.html)
+(function () {
+"use strict";
+
+// ---------------------------------------------------------------------
+// Static reference data (verbatim from the design)
+// ---------------------------------------------------------------------
+
+var DRIVE_TIERS = [
+  { name: "Tier 1 — Anchor", tagline: "high-yield, low cal", color: "#52734a", items: [
+    { food: "Fatty fish (salmon, sardines, mackerel)", amount: "4–6 oz", freq: "2–3×/wk", why: "Omega-3 + protein; T + circulation. The only item doing double duty." },
+    { food: "Dark berries (blueberry, blackberry, tart cherry)", amount: "1 cup / ~150g · ~85 cal", freq: "daily", why: "Top flavonoid data (anthocyanins). Darker = more active compound; frozen wild blueberries are highest." },
+    { food: "Oysters / shellfish", amount: "6 oysters or 4 oz", freq: "1–2×/wk", why: "Zinc → testosterone; lean." },
+    { food: "Leafy greens (spinach, arugula)", amount: "1–2 cups", freq: "5+/wk", why: "Nitrate → nitric oxide; near-free calories." },
+    { food: "Beets", amount: "½ cup / ~85g · ~40 cal", freq: "3–4×/wk", why: "Nitrate → blood flow." },
+    { food: "Citrus / apples", amount: "1 medium", freq: "daily-ish", why: "Flavanones/flavones, same protective class as berries." }
+  ]},
+  { name: "Tier 2 — Weigh It", tagline: "calorie-dense", color: "#3f6f8f", items: [
+    { food: "Pumpkin seeds", amount: "1 oz / ~28g · ~160 cal", freq: "2–3×/wk", why: "Zinc + magnesium." },
+    { food: "Dark chocolate 85%", amount: "15–20g · ~100–120 cal", freq: "optional daily", why: "Flavonoids + dopamine — only food lever on drive directly. Hard-cap it." },
+    { food: "Avocado", amount: "¼–½ fruit · ~80 cal/qtr", freq: "optional", why: "Zinc, vitamin E, healthy fat." }
+  ]},
+  { name: "Tier 3 — Bonus", tagline: "weak evidence", color: "#75786a", items: [
+    { food: "Hot peppers", amount: "to taste · free", freq: "optional", why: "Capsaicin; single-study T link." },
+    { food: "Oats", amount: "carb source only", freq: "optional", why: "L-arginine/blood-flow claim contested (2018 review, weaker than marketed)." }
+  ]}
+];
+
+var DRIVE_NOTES = [
+  "Fatty fish = priority; anchor 2–3 dinners/week.",
+  "Tier 1 stacks actives without touching the deficit — spend your budget here.",
+  "Portion-police Tier 2 — where a “libido food” turns into 300 stray calories.",
+  "Berries: darker = more anthocyanins. Prefer dark berries; any real berry still beats none, and daily beats perfect."
+];
+
+var DARK_BERRIES_NOTE = "Dark berries = blueberries (frozen wild are highest), blackberries, black raspberries, tart/dark cherries, and boysenberries. Strawberries and red raspberries count but are lighter — fine as a default.";
+
+// ---------------------------------------------------------------------
+// Custom Meal Calculator — build-your-own-plate food database
+// ---------------------------------------------------------------------
+// unit "g": macros are per 100g, quantity entered/stepped in grams.
+// unit "count": macros are per 1 unit (egg, slice, tbsp, scoop...).
+// No onions anywhere. Eggs are whole-egg preps only (boiled/fried/over-easy) —
+// no scrambled or omelet entries. Ground beef is 90/10 or 88/12 only.
+
+// satFat = grams of the food's total "fat" that are saturated (the rest is
+// mono/polyunsaturated). Shown as a secondary, informational line — no hard
+// target is imposed on it, since that's a personal call, not this app's to make.
+var CALC_FOODS = [
+  // ---- Protein ----
+  { id: "steak-sirloin", name: "Sirloin Steak (cooked)", category: "Protein", unit: "g", protein: 29, fat: 8, satFat: 3, carbs: 0 },
+  { id: "steak-ribeye", name: "Ribeye Steak (cooked)", category: "Protein", unit: "g", protein: 25, fat: 20, satFat: 8, carbs: 0 },
+  { id: "steak-filet", name: "Filet Mignon (cooked)", category: "Protein", unit: "g", protein: 28, fat: 10, satFat: 4, carbs: 0 },
+  { id: "steak-flank", name: "Flank Steak (cooked)", category: "Protein", unit: "g", protein: 28, fat: 10, satFat: 4, carbs: 0 },
+  { id: "chicken-breast", name: "Chicken Breast (cooked, skinless)", category: "Protein", unit: "g", protein: 31, fat: 4, satFat: 1, carbs: 0 },
+  { id: "chicken-thigh", name: "Chicken Thigh (cooked, skinless)", category: "Protein", unit: "g", protein: 26, fat: 10, satFat: 3, carbs: 0 },
+  { id: "cornish-game-hen", name: "Cornish Game Hen (roasted, meat & skin)", category: "Protein", unit: "g", protein: 22, fat: 18, satFat: 5, carbs: 0 },
+  { id: "white-fish-cod", name: "Cod (cooked)", category: "Protein", unit: "g", protein: 23, fat: 1, satFat: 0.2, carbs: 0 },
+  { id: "white-fish-tilapia", name: "Tilapia (cooked)", category: "Protein", unit: "g", protein: 26, fat: 3, satFat: 1, carbs: 0 },
+  { id: "canned-tuna", name: "Canned Tuna (in water, drained)", category: "Protein", unit: "g", protein: 26, fat: 1, satFat: 0.3, carbs: 0 },
+  { id: "ground-beef-9010", name: "Ground Beef 90/10 (cooked)", category: "Protein", unit: "g", protein: 27, fat: 12, satFat: 4.5, carbs: 0 },
+  { id: "ground-beef-8812", name: "Ground Beef 88/12 (cooked)", category: "Protein", unit: "g", protein: 26, fat: 14, satFat: 5.5, carbs: 0 },
+  { id: "costco-carne-asada", name: "Costco Carne Asada (marinated beef, cooked)", category: "Protein", unit: "g", protein: 17, fat: 7, satFat: 3, carbs: 1, note: "Approx., per 100g cooked — Costco's pre-cut carne asada varies by region/supplier. Based on a 4oz cooked serving (150 cal, 19g protein, 8g fat, 1g carb). Weigh cooked weight." },
+  { id: "nathans-beef-frank", name: "Nathan's Famous Beef Frank (hot dog)", category: "Protein", unit: "count", unitLabel: "frank", protein: 5, fat: 12, satFat: 5, carbs: 1, calories: 130, note: "Per 1 frank (42g), original (not skinless). If yours is a different Nathan's variety (skinless, angus, jumbo), check the box — calories can run 110-180/link across their lineup." },
+  { id: "egg-boiled", name: "Egg, Boiled", category: "Protein", unit: "count", protein: 6, fat: 5, satFat: 1.6, carbs: 0.5 },
+  { id: "egg-fried", name: "Egg, Fried", category: "Protein", unit: "count", protein: 6, fat: 7, satFat: 2.5, carbs: 0.5 },
+  { id: "egg-over-easy", name: "Egg, Over-Easy", category: "Protein", unit: "count", protein: 6, fat: 7, satFat: 2.5, carbs: 0.5 },
+  { id: "egg-scrambled", name: "Egg, Scrambled (plain)", category: "Protein", unit: "count", protein: 6, fat: 7, satFat: 2.5, carbs: 0.5, note: "Plain — no mix-ins" },
+  { id: "egg-whites", name: "Egg Whites", category: "Protein", unit: "g", protein: 11, fat: 0, satFat: 0, carbs: 1 },
+  { id: "greek-yogurt", name: "Greek Yogurt (plain, nonfat)", category: "Protein", unit: "g", protein: 10, fat: 0, satFat: 0, carbs: 4 },
+  { id: "yogurt-fage-total-0", name: "Fage Total 0% Plain Greek Yogurt", category: "Protein", unit: "g", protein: 10.59, fat: 0, satFat: 0, carbs: 3.53, calories: 53, note: "Label: 6oz (170g) = 18g P/6g C/90 cal. Plain, unsweetened — add your own berries. Ingredients: Grade A pasteurized skimmed milk, live active cultures." },
+  { id: "yogurt-kirkland-nonfat-plain", name: "Kirkland Signature Nonfat Plain Greek Yogurt", category: "Protein", unit: "g", protein: 10.59, fat: 0, satFat: 0, carbs: 4.12, calories: 59, note: "Label: 2/3 cup (170g) = 18g P/7g C/100 cal. Costco house brand, same macro profile as Fage. Plain, unsweetened." },
+  { id: "whey-protein-vanilla", name: "Whey Protein Powder (vanilla)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.5, satFat: 0.5, carbs: 3 },
+  { id: "collagen-peptides-vp", name: "Collagen Peptides (Vital Proteins, unflavored)", category: "Protein", unit: "count", unitLabel: "tbsp", protein: 9, fat: 0, satFat: 0, carbs: 0, calories: 35, note: "1 tbsp = their scoop; 2 tbsp = 1 label serving" },
+  { id: "salmon-fillet", name: "Salmon Fillet (cooked)", category: "Protein", unit: "g", protein: 25, fat: 13, satFat: 2.7, carbs: 0 },
+  { id: "shrimp", name: "Shrimp (cooked)", category: "Protein", unit: "g", protein: 24, fat: 0.3, satFat: 0.1, carbs: 0.2 },
+  { id: "smoked-salmon", name: "Smoked Salmon", category: "Protein", unit: "g", protein: 18.3, fat: 4.3, satFat: 0.9, carbs: 0, note: "High sodium — cured/smoked" },
+  { id: "ground-turkey", name: "Ground Turkey (cooked, lean)", category: "Protein", unit: "g", protein: 27, fat: 8, satFat: 2, carbs: 0 },
+  { id: "ground-chicken", name: "Ground Chicken (cooked)", category: "Protein", unit: "g", protein: 24, fat: 11, satFat: 3, carbs: 0 },
+  { id: "pork-tenderloin", name: "Pork Tenderloin (cooked)", category: "Protein", unit: "g", protein: 26, fat: 3.5, satFat: 1.2, carbs: 0 },
+  { id: "pulled-pork", name: "Pulled Pork (cooked, no sauce)", category: "Protein", unit: "g", protein: 25, fat: 10, satFat: 3.5, carbs: 0 },
+  { id: "pork-chop", name: "Pork Chop, Boneless (cooked)", category: "Protein", unit: "g", protein: 26, fat: 7, satFat: 2.5, carbs: 0 },
+  { id: "turkey-bacon", name: "Turkey Bacon (cooked)", category: "Protein", unit: "count", unitLabel: "slice", protein: 2.5, fat: 2, satFat: 0.6, carbs: 0.3 },
+  { id: "canadian-bacon", name: "Canadian Bacon", category: "Protein", unit: "count", unitLabel: "slice", protein: 5.5, fat: 1, satFat: 0.3, carbs: 0.5 },
+  { id: "chicken-sausage", name: "Chicken Sausage Link", category: "Protein", unit: "count", unitLabel: "link", protein: 11, fat: 6, satFat: 1.5, carbs: 2 },
+  { id: "chicken-chorizo", name: "Chicken Chorizo", category: "Protein", unit: "g", protein: 20, fat: 14, satFat: 4, carbs: 2 },
+  { id: "turkey-breakfast-sausage", name: "Turkey Breakfast Sausage Link", category: "Protein", unit: "count", unitLabel: "link", protein: 6, fat: 4, satFat: 1, carbs: 0.5 },
+  { id: "deli-turkey", name: "Deli Turkey Breast (sliced)", category: "Protein", unit: "g", protein: 18, fat: 1, satFat: 0.3, carbs: 3 },
+  { id: "deli-ham", name: "Deli Ham (sliced)", category: "Protein", unit: "g", protein: 17, fat: 4, satFat: 1.3, carbs: 2 },
+  { id: "halibut", name: "Halibut (cooked)", category: "Protein", unit: "g", protein: 27, fat: 2.5, satFat: 0.4, carbs: 0 },
+  { id: "mahi-mahi", name: "Mahi Mahi (cooked)", category: "Protein", unit: "g", protein: 26, fat: 1, satFat: 0.2, carbs: 0 },
+  { id: "catfish", name: "Catfish (cooked)", category: "Protein", unit: "g", protein: 18, fat: 7, satFat: 1.6, carbs: 0 },
+  { id: "haddock", name: "Haddock (cooked)", category: "Protein", unit: "g", protein: 24, fat: 1, satFat: 0.1, carbs: 0 },
+  { id: "red-snapper", name: "Red Snapper (cooked)", category: "Protein", unit: "g", protein: 26, fat: 1.5, satFat: 0.3, carbs: 0 },
+  { id: "mackerel", name: "Mackerel (cooked)", category: "Protein", unit: "g", protein: 23, fat: 17, satFat: 4, carbs: 0 },
+  { id: "sea-scallops", name: "Sea Scallops (cooked)", category: "Protein", unit: "g", protein: 20, fat: 0.8, satFat: 0.1, carbs: 2.4 },
+  { id: "crab-meat", name: "Crab Meat, Lump (cooked)", category: "Protein", unit: "g", protein: 20, fat: 1.5, satFat: 0.2, carbs: 0 },
+  { id: "ahi-tuna", name: "Tuna Steak, Ahi/Sushi-Grade (raw or seared)", category: "Protein", unit: "g", protein: 28, fat: 1, satFat: 0.3, carbs: 0 },
+  { id: "sardines", name: "Sardines (canned, in water)", category: "Protein", unit: "g", protein: 25, fat: 11, satFat: 1.5, carbs: 0 },
+  { id: "king-oscar-sardines-evoo", name: "King Oscar Sardines in Extra Virgin Olive Oil", category: "Protein", unit: "count", unitLabel: "can (85g drained)", protein: 16, fat: 18, satFat: 4, carbs: 0, calories: 230, note: "Ingredients: sardines, EVOO, salt — no onion/garlic. Avoid the 'Mediterranean Style' variant (contains garlic, red bell pepper, olives)." },
+  { id: "kirkland-albacore-tuna", name: "Kirkland Signature Albacore Tuna in Water", category: "Protein", unit: "count", unitLabel: "can (5.4oz drained)", protein: 42, fat: 3, satFat: 0.5, carbs: 0, calories: 190, note: "Ingredients: albacore tuna, water, sea salt, sodium acid pyrophosphate — no onion/mushroom. Costco item #1492456." },
+  { id: "kirkland-sockeye-salmon", name: "Kirkland Signature Wild Sockeye Salmon (frozen portion)", category: "Protein", unit: "count", unitLabel: "portion (~6oz)", protein: 37, fat: 15, satFat: 2.5, carbs: 0, calories: 290, note: "⚠️ Two label versions circulate for this product — an older/leaner panel shows 220 cal/38g P/8g F/1.5g sat instead. Photograph your actual bag's nutrition panel and adjust if it doesn't match. Costco confirms 37g protein/serving either way. 100% salmon, no additives." },
+  { id: "costco-rotisserie-chicken", name: "Costco/Kirkland Rotisserie Chicken (cooked)", category: "Protein", unit: "g", protein: 23.5, fat: 8, satFat: 2.4, carbs: 1, calories: 165, note: "Label per 3oz (85g): ~20g P/7g F/2g sat/1g C/140 cal. Ingredients: whole chicken, water, seasoning (salt, sodium phosphate, modified food starch, potato dextrin, carrageenan, sugar, dextrose, spice extractives) — no onion/mushroom, but high sodium (~460mg per 3oz)." },
+  { id: "beef-jerky", name: "Beef Jerky", category: "Protein", unit: "count", unitLabel: "oz", protein: 9, fat: 1, satFat: 0.4, carbs: 3, calories: 70 },
+  { id: "turkey-jerky", name: "Turkey Jerky", category: "Protein", unit: "count", unitLabel: "oz", protein: 11, fat: 1, satFat: 0.3, carbs: 4, calories: 70 },
+  { id: "chicken-jerky", name: "Chicken Breast Jerky", category: "Protein", unit: "count", unitLabel: "oz", protein: 12, fat: 1, satFat: 0.3, carbs: 3, calories: 65 },
+  { id: "beef-sticks", name: "Beef Sticks", category: "Protein", unit: "count", unitLabel: "stick", protein: 6, fat: 8, satFat: 3, carbs: 1, calories: 100 },
+  { id: "tofu-extra-firm", name: "Extra-Firm Tofu", category: "Protein", unit: "g", protein: 10, fat: 5, satFat: 0.8, carbs: 2 },
+  { id: "shaved-beef", name: "Shaved Beef (cooked, cheesesteak-style)", category: "Protein", unit: "g", protein: 26, fat: 10, satFat: 4, carbs: 0 },
+  { id: "oikos-vanilla", name: "Oikos Triple Zero (Vanilla)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 10, calories: 90 },
+  { id: "oikos-strawberry", name: "Oikos Triple Zero (Strawberry)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 6, calories: 90 },
+  { id: "oikos-blueberry", name: "Oikos Triple Zero (Blueberry)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 8, calories: 90 },
+  { id: "oikos-peach", name: "Oikos Triple Zero (Peach)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 6, calories: 90 },
+  { id: "oikos-cherry", name: "Oikos Triple Zero (Cherry)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 6, calories: 90 },
+  { id: "oikos-mixed-berry", name: "Oikos Triple Zero (Mixed Berry)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 7, calories: 90 },
+  { id: "oikos-strawberry-banana", name: "Oikos Triple Zero (Strawberry Banana)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 10, calories: 90 },
+  { id: "oikos-banana-creme", name: "Oikos Triple Zero (Banana Crème)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 7, calories: 90 },
+  { id: "oikos-salted-caramel", name: "Oikos Triple Zero (Salted Caramel)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 7, calories: 90 },
+  { id: "oikos-lemon-tart", name: "Oikos Triple Zero (Lemon Tart)", category: "Protein", unit: "count", unitLabel: "cup (5.3oz)", protein: 15, fat: 0, satFat: 0, carbs: 10, calories: 90 },
+  { id: "on-gs-double-rich-chocolate", name: "Gold Standard 100% Whey (Double Rich Chocolate)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-extreme-milk-chocolate", name: "Gold Standard 100% Whey (Extreme Milk Chocolate)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.5, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-french-vanilla-creme", name: "Gold Standard 100% Whey (French Vanilla Crème)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1, satFat: 0.5, carbs: 2, calories: 120 },
+  { id: "on-gs-vanilla-ice-cream", name: "Gold Standard 100% Whey (Vanilla Ice Cream)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1, satFat: 0.5, carbs: 4, calories: 120 },
+  { id: "on-gs-cookies-and-cream", name: "Gold Standard 100% Whey (Cookies & Cream)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-chocolate-peanut-butter", name: "Gold Standard 100% Whey (Chocolate Peanut Butter)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 2, satFat: 1, carbs: 4, calories: 130 },
+  { id: "on-gs-banana-cream", name: "Gold Standard 100% Whey (Banana Cream)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.5, satFat: 0.5, carbs: 4, calories: 125 },
+  { id: "on-gs-delicious-strawberry", name: "Gold Standard 100% Whey (Delicious Strawberry)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-rocky-road", name: "Gold Standard 100% Whey (Rocky Road)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.5, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-chocolate-mint", name: "Gold Standard 100% Whey (Chocolate Mint)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 2, calories: 120 },
+  { id: "on-gs-white-chocolate", name: "Gold Standard 100% Whey (White Chocolate)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-mocha-cappuccino", name: "Gold Standard 100% Whey (Mocha Cappuccino)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.5, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-strawberries-and-cream", name: "Gold Standard 100% Whey (Strawberries & Cream)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-chocolate-malt", name: "Gold Standard 100% Whey (Chocolate Malt)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-chocolate-hazelnut", name: "Gold Standard 100% Whey (Chocolate Hazelnut)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-chocolate-coconut", name: "Gold Standard 100% Whey (Chocolate Coconut)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-chocolate-orange", name: "Gold Standard 100% Whey (Chocolate Orange)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-strawberry-banana", name: "Gold Standard 100% Whey (Strawberry Banana)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-white-chocolate-raspberry", name: "Gold Standard 100% Whey (White Chocolate Raspberry)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1.3, satFat: 0.5, carbs: 3, calories: 120 },
+  { id: "on-gs-unflavored", name: "Gold Standard 100% Whey (Unflavored)", category: "Protein", unit: "count", unitLabel: "scoop", protein: 24, fat: 1, satFat: 0.5, carbs: 1, calories: 110 },
+  { id: "isopure-unflavored", name: "Isopure (Unflavored (Zero Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 0, satFat: 0, carbs: 0, calories: 100, note: "Nature's Best Isopure 100% Whey Protein Isolate" },
+  { id: "isopure-creamy-vanilla", name: "Isopure (Creamy Vanilla (Zero Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 1, satFat: 0.3, carbs: 0, calories: 110 },
+  { id: "isopure-strawberries-and-cream", name: "Isopure (Strawberries & Cream (Zero Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 1, satFat: 0.3, carbs: 0, calories: 110 },
+  { id: "isopure-vanilla-salted-caramel", name: "Isopure (Vanilla Salted Caramel (Zero Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 0.5, satFat: 0.2, carbs: 0, calories: 110 },
+  { id: "isopure-dutch-chocolate", name: "Isopure (Dutch Chocolate (Low Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 0.5, satFat: 0.2, carbs: 2, calories: 110 },
+  { id: "isopure-chocolate-peanut-butter", name: "Isopure (Chocolate Peanut Butter (Low Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 0.5, satFat: 0.2, carbs: 2, calories: 110 },
+  { id: "isopure-toasted-coconut", name: "Isopure (Toasted Coconut (Low Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 0.5, satFat: 0.3, carbs: 2, calories: 110 },
+  { id: "isopure-cookies-and-cream", name: "Isopure (Cookies & Cream (Low Carb))", category: "Protein", unit: "count", unitLabel: "scoop", protein: 25, fat: 0.5, satFat: 0.2, carbs: 2, calories: 110 },
+  { id: "muscle-milk-pro33-cookies-creme", name: "Muscle Milk Pro Series PRO33 (Cookies 'n Crème)", category: "Protein", unit: "count", unitLabel: "carton (11 fl oz)", protein: 33, fat: 1.5, satFat: 1, carbs: 12, calories: 190, note: "Ultra-filtered milk shake — 0g added sugars, 280mg sodium" },
+  { id: "muscle-milk-pro33-chocolate", name: "Muscle Milk Pro Series PRO33 (Chocolate)", category: "Protein", unit: "count", unitLabel: "carton (11 fl oz)", protein: 33, fat: 1.5, satFat: 1, carbs: 14, calories: 200, note: "Runs slightly higher than the other PRO33 flavors — 200 cal, 3g sugar per label. Fat/carb split estimated from calorie math; confirm on your carton." },
+  { id: "muscle-milk-pro33-vanilla-creme", name: "Muscle Milk Pro Series PRO33 (Vanilla Crème)", category: "Protein", unit: "count", unitLabel: "carton (11 fl oz)", protein: 33, fat: 1.5, satFat: 1, carbs: 12, calories: 190, note: "Assumed to match the Cookies 'n Crème / Strawberries 'n Crème macro profile (190 cal) — not individually label-confirmed." },
+  { id: "muscle-milk-pro33-strawberries-creme", name: "Muscle Milk Pro Series PRO33 (Strawberries 'n Crème)", category: "Protein", unit: "count", unitLabel: "carton (11 fl oz)", protein: 33, fat: 1.5, satFat: 1, carbs: 12, calories: 190, note: "Label-confirmed: 190 cal, 33g protein, 1g sat fat, 280mg sodium, 0g added sugar." },
+  { id: "premier-protein-chocolate", name: "Premier Protein (Chocolate)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160, note: "1g sugar, 24 vitamins & minerals — consistent macro profile across the classic Premier Protein line." },
+  { id: "premier-protein-vanilla", name: "Premier Protein (Vanilla)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160 },
+  { id: "premier-protein-cafe-latte", name: "Premier Protein (Café Latte)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 0.5, carbs: 5, calories: 160, note: "Contains coffee — has caffeine" },
+  { id: "premier-protein-strawberries-cream", name: "Premier Protein (Strawberries & Cream)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160 },
+  { id: "premier-protein-caramel", name: "Premier Protein (Caramel)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160 },
+  { id: "premier-protein-cookies-cream", name: "Premier Protein (Cookies & Cream)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160 },
+  { id: "premier-protein-bananas-cream", name: "Premier Protein (Bananas & Cream)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160 },
+  { id: "premier-protein-peaches-cream", name: "Premier Protein (Peaches & Cream)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160 },
+  { id: "premier-protein-caramel-macchiato", name: "Premier Protein (Caramel Macchiato)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160, note: "Coffeehouse line — contains caffeine" },
+  { id: "premier-protein-orange-cream-swirl", name: "Premier Protein (Orange Cream Swirl)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160, note: "Limited Edition. Label-confirmed: 30g protein, 160 cal, 25% DV vitamin C." },
+  { id: "premier-protein-lemon-bar", name: "Premier Protein (Lemon Bar)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160, note: "Limited Edition — macros not individually label-confirmed, assumed to match the standard line." },
+  { id: "premier-protein-salted-caramel-popcorn", name: "Premier Protein (Salted Caramel Popcorn)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160, note: "Limited Edition — macros not individually label-confirmed, assumed to match the standard line." },
+  { id: "premier-protein-pumpkin-spice", name: "Premier Protein (Pumpkin Spice)", category: "Protein", unit: "count", unitLabel: "bottle (11.5oz)", protein: 30, fat: 3, satFat: 1, carbs: 5, calories: 160, note: "Seasonal flavor — macros not individually label-confirmed, assumed to match the standard line." },
+  { id: "beef-chuck-roast", name: "Beef Chuck Roast / Pot Roast (cooked)", category: "Protein", unit: "g", protein: 29, fat: 12, satFat: 4.7, carbs: 0 },
+  { id: "beef-eye-of-round-roast", name: "Beef Eye of Round / Rump Roast (cooked)", category: "Protein", unit: "g", protein: 30, fat: 5, satFat: 1.9, carbs: 0 },
+  { id: "beef-brisket", name: "Beef Brisket (cooked)", category: "Protein", unit: "g", protein: 27, fat: 20, satFat: 8, carbs: 0, note: "Whole/packer brisket (point + flat), USDA Choice" },
+  { id: "pork-loin-roast", name: "Pork Loin Roast (cooked)", category: "Protein", unit: "g", protein: 27, fat: 7, satFat: 2.5, carbs: 0 },
+  { id: "beef-chuck-steak-carne-asada", name: "Beef Chuck Steak, Boneless / Carne Asada (cooked)", category: "Protein", unit: "g", protein: 29, fat: 12, satFat: 4.7, carbs: 0, note: "Blade-tenderized chuck steak — same cut family as chuck roast" },
+  { id: "jones-chicken-sausage-link", name: "Jones Dairy Farm Chicken Sausage Link (No Antibiotics Ever)", category: "Protein", unit: "count", unitLabel: "link", protein: 3.3, fat: 1.7, satFat: 0.5, carbs: 0, calories: 30, note: "Label: 3 links = 90 cal / 10g P / 5g F / 0g C, 75% less fat than pork sausage" },
+
+  // ---- Carbs ----
+  { id: "rice-white", name: "White Rice (cooked)", category: "Carbs", unit: "g", protein: 2.7, fat: 0.3, satFat: 0.1, carbs: 28 },
+  { id: "rice-brown", name: "Brown Rice (cooked)", category: "Carbs", unit: "g", protein: 2.6, fat: 1, satFat: 0.2, carbs: 23 },
+  { id: "sweet-potato", name: "Sweet Potato (baked)", category: "Carbs", unit: "g", protein: 2, fat: 0.1, satFat: 0, carbs: 21 },
+  { id: "potato", name: "Potato (baked)", category: "Carbs", unit: "g", protein: 2.5, fat: 0.1, satFat: 0, carbs: 21 },
+  { id: "potato-russet-baked", name: "Russet Potato (baked, skin on)", category: "Carbs", unit: "g", protein: 2.5, fat: 0.2, satFat: 0, carbs: 21.2 },
+  { id: "potato-red-baked", name: "Red Potato (baked, skin on)", category: "Carbs", unit: "g", protein: 2.1, fat: 0.1, satFat: 0, carbs: 20.1 },
+  { id: "potato-yukon-gold-baked", name: "Yukon Gold Potato (baked, skin on)", category: "Carbs", unit: "g", protein: 2.1, fat: 0.1, satFat: 0, carbs: 20.5 },
+  { id: "potato-white-round-baked", name: "White/Round Potato (baked, skin on)", category: "Carbs", unit: "g", protein: 2.3, fat: 0.1, satFat: 0, carbs: 21 },
+  { id: "potato-purple-baked", name: "Purple Potato (baked, skin on)", category: "Carbs", unit: "g", protein: 2.1, fat: 0.1, satFat: 0, carbs: 20.5 },
+  { id: "potato-fingerling-baked", name: "Fingerling Potato (baked, skin on)", category: "Carbs", unit: "g", protein: 2, fat: 0.1, satFat: 0, carbs: 20 },
+  { id: "potato-baby-new-baked", name: "Baby/New Potatoes (baked, skin on)", category: "Carbs", unit: "g", protein: 2, fat: 0.1, satFat: 0, carbs: 19.5 },
+  { id: "quinoa", name: "Quinoa (cooked)", category: "Carbs", unit: "g", protein: 4.4, fat: 1.9, satFat: 0.2, carbs: 21 },
+  { id: "farro", name: "Farro (cooked)", category: "Carbs", unit: "g", protein: 5, fat: 1, satFat: 0.2, carbs: 26 },
+  { id: "corn-tortilla", name: "Corn Tortilla", category: "Carbs", unit: "count", protein: 1.5, fat: 0.6, satFat: 0.1, carbs: 10.7 },
+  { id: "protein-pasta", name: "Protein Pasta (dry)", category: "Carbs", unit: "g", protein: 25, fat: 2, satFat: 0.3, carbs: 50, note: "Chickpea/lentil-based, as-purchased dry weight" },
+  { id: "protein-waffle", name: "Protein Waffle", category: "Carbs", unit: "count", protein: 12, fat: 4, satFat: 1, carbs: 18 },
+  { id: "rice-cake", name: "Rice Cake", category: "Carbs", unit: "count", protein: 0.7, fat: 0.3, satFat: 0, carbs: 7.3 },
+  { id: "quaker-chocolate-rice-cake", name: "Quaker Chocolate Rice Cake", category: "Carbs", unit: "count", protein: 1, fat: 1, satFat: 0.2, carbs: 12, calories: 60, note: "4g sugar (3g added), 40mg sodium per cake" },
+  { id: "whole-grain-bagel", name: "Whole-Grain Bagel", category: "Carbs", unit: "count", protein: 10, fat: 1.5, satFat: 0.2, carbs: 48 },
+  { id: "whole-grain-bun", name: "Whole-Grain Bun", category: "Carbs", unit: "count", protein: 6, fat: 2, satFat: 0.3, carbs: 22 },
+  { id: "high-protein-bread", name: "High-Protein Bread", category: "Carbs", unit: "count", unitLabel: "slice", protein: 6, fat: 1, satFat: 0.2, carbs: 12 },
+  { id: "oat-flour", name: "Oat Flour", category: "Carbs", unit: "g", protein: 13.5, fat: 6.5, satFat: 1.1, carbs: 68 },
+  { id: "breadcrumbs", name: "Breadcrumbs, plain", category: "Carbs", unit: "g", protein: 13, fat: 3.5, satFat: 0.6, carbs: 72 },
+  { id: "chickpeas", name: "Chickpeas (cooked/canned, drained)", category: "Carbs", unit: "g", protein: 8, fat: 2.6, satFat: 0.3, carbs: 27 },
+  { id: "kidney-beans", name: "Kidney Beans (canned, drained)", category: "Carbs", unit: "g", protein: 8.7, fat: 0.5, satFat: 0.1, carbs: 22.8 },
+  { id: "black-beans", name: "Black Beans (canned, drained)", category: "Carbs", unit: "g", protein: 8.9, fat: 0.5, satFat: 0.1, carbs: 24 },
+  { id: "garbanzo-signature-select", name: "Garbanzo Beans, canned (Signature Select/Kroger)", category: "Carbs", unit: "g", protein: 4.6, fat: 1.5, satFat: 0.2, carbs: 15.4, calories: 92, note: "Label: 1/2 cup (130g) = 6g P/2g F/20g C/120 cal. Ingredients: garbanzo beans, water, salt, calcium chloride, disodium EDTA, sodium metabisulfite — no onion. Lower per-100g than the generic Chickpeas entry, which runs closer to cooked-from-dry USDA values — use whichever matches what you actually bought." },
+  { id: "pinto-beans", name: "Pinto Beans (canned/cooked, drained)", category: "Carbs", unit: "g", protein: 7.7, fat: 0.5, satFat: 0.1, carbs: 18 },
+  { id: "egg-noodles", name: "Egg Noodles (cooked)", category: "Carbs", unit: "g", protein: 4.5, fat: 2, satFat: 0.4, carbs: 25 },
+  { id: "rice-noodles", name: "Rice Noodles (dry)", category: "Carbs", unit: "g", protein: 7, fat: 0.4, satFat: 0.1, carbs: 80 },
+  { id: "crisp-rice-cereal", name: "Crisp Rice Cereal", category: "Carbs", unit: "g", protein: 6, fat: 0.6, satFat: 0, carbs: 87 },
+  { id: "dry-grits", name: "Grits (dry)", category: "Carbs", unit: "g", protein: 8.7, fat: 1.5, satFat: 0.2, carbs: 79 },
+  { id: "banana", name: "Banana", category: "Carbs", unit: "count", unitLabel: "medium", protein: 1.3, fat: 0.4, satFat: 0.1, carbs: 27 },
+  { id: "bolillo-food-city", name: "Bolillo Roll (Food City)", category: "Carbs", unit: "count", unitLabel: "roll", protein: 7, fat: 2, satFat: 0.4, carbs: 38, calories: 200, note: "Other trackers list 210 cal/46g C — check the bag label to confirm" },
+  { id: "oats", name: "Oats (cooked)", category: "Carbs", unit: "g", protein: 2.5, fat: 1.5, satFat: 0.3, carbs: 12 },
+  { id: "bread-wg", name: "Whole-Grain Bread", category: "Carbs", unit: "count", protein: 4, fat: 1, satFat: 0.2, carbs: 12 },
+  { id: "tortilla-hp", name: "High-Protein Tortilla", category: "Carbs", unit: "count", protein: 9, fat: 3, satFat: 0.5, carbs: 15 },
+  { id: "dkb-21-grains", name: "Dave's Killer Bread (21 Whole Grains & Seeds)", category: "Carbs", unit: "count", unitLabel: "slice", protein: 5, fat: 2, satFat: 0, carbs: 22, calories: 120, note: "Label-confirmed (HEB, 2026): 120 cal, 5g protein, 2g fat, 0g sat fat, 22g carbs per slice." },
+  { id: "dkb-thin-sliced", name: "Dave's Killer Bread, Thin-Sliced", category: "Carbs", unit: "count", unitLabel: "slice", protein: 3, fat: 1, satFat: 0.2, carbs: 12, calories: 70, note: "Label: 70 cal, 3g fiber per slice — no onion" },
+  { id: "bonne-maman-four-fruits", name: "Bonne Maman Four Fruits Preserves", category: "Carbs", unit: "count", unitLabel: "tbsp", protein: 0, fat: 0, satFat: 0, carbs: 13, calories: 50 },
+
+  // ---- Fats & Dairy ----
+  { id: "olive-oil", name: "Olive Oil", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0, fat: 14, satFat: 2, carbs: 0, calories: 120, note: "Mostly monounsaturated. Matches the Kirkland Signature EVOO label exactly." },
+  { id: "good-culture-cottage-cheese", name: "Good Culture 2% Cottage Cheese", category: "Fats & Dairy", unit: "g", protein: 12.7, fat: 1.8, satFat: 1.4, carbs: 3.6, calories: 82, note: "Label: 1/2 cup (110g) = 14g P/2g F/1.5g sat/4g C/90 cal. Ingredients: skim milk, whole milk, cream, sea salt, live/active cultures — no onion." },
+  { id: "butter", name: "Butter", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0, fat: 11, satFat: 7, carbs: 0, note: "Mostly saturated" },
+  { id: "cheddar", name: "Cheddar Cheese (shredded)", category: "Fats & Dairy", unit: "g", protein: 23, fat: 33, satFat: 19, carbs: 1, note: "Mostly saturated" },
+  { id: "milk-2percent", name: "Milk (2%)", category: "Fats & Dairy", unit: "g", protein: 3.3, fat: 2, satFat: 1.2, carbs: 4.9 },
+  { id: "avocado", name: "Avocado", category: "Fats & Dairy", unit: "count", unitLabel: "half", protein: 2, fat: 15, satFat: 2, carbs: 9, note: "Mostly mono/polyunsaturated" },
+  { id: "peanut-butter", name: "Peanut Butter", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 4, fat: 8, satFat: 1.5, carbs: 3, note: "Mostly mono/polyunsaturated" },
+  { id: "mozzarella", name: "Mozzarella Cheese (shredded)", category: "Fats & Dairy", unit: "g", protein: 22, fat: 22, satFat: 13, carbs: 2.2 },
+  { id: "parmesan", name: "Parmesan Cheese", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 1, fat: 1.5, satFat: 1, carbs: 0.1 },
+  { id: "feta", name: "Feta Cheese", category: "Fats & Dairy", unit: "g", protein: 14, fat: 21, satFat: 15, carbs: 4 },
+  { id: "provolone", name: "Provolone Cheese", category: "Fats & Dairy", unit: "count", unitLabel: "oz", protein: 7, fat: 7.5, satFat: 4.8, carbs: 0.6 },
+  { id: "swiss-cheese", name: "Swiss Cheese", category: "Fats & Dairy", unit: "count", unitLabel: "oz", protein: 7.6, fat: 7.8, satFat: 5, carbs: 1.5 },
+  { id: "blue-cheese", name: "Blue Cheese, crumbled", category: "Fats & Dairy", unit: "count", unitLabel: "oz", protein: 6, fat: 8.1, satFat: 5.3, carbs: 0.7 },
+  { id: "cream-cheese", name: "Cream Cheese", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 1, fat: 5, satFat: 3, carbs: 0.8 },
+  { id: "light-cream-cheese", name: "Light Cream Cheese", category: "Fats & Dairy", unit: "count", unitLabel: "oz", protein: 3, fat: 3, satFat: 1.9, carbs: 2 },
+  { id: "ricotta", name: "Part-Skim Ricotta", category: "Fats & Dairy", unit: "g", protein: 11, fat: 8, satFat: 5, carbs: 3.8 },
+  { id: "string-cheese", name: "String Cheese Stick", category: "Fats & Dairy", unit: "count", protein: 7, fat: 6, satFat: 4, carbs: 1 },
+  { id: "almonds", name: "Almonds", category: "Fats & Dairy", unit: "count", unitLabel: "10 nuts", protein: 3, fat: 8, satFat: 0.6, carbs: 3 },
+  { id: "kirkland-almonds-1oz", name: "Kirkland Signature Raw Almonds (1oz)", category: "Fats & Dairy", unit: "count", unitLabel: "oz (28g)", protein: 6, fat: 14, satFat: 1, carbs: 6, calories: 160, note: "Single ingredient — no onion. Salted/roasted Kirkland almonds have near-identical macros; track sodium separately if you buy those." },
+  { id: "walnuts", name: "Chopped Walnuts", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 1.8, fat: 7.7, satFat: 0.7, carbs: 1.6 },
+  { id: "kirkland-walnuts-1oz", name: "Kirkland Signature Walnuts (1oz, raw halves & pieces)", category: "Fats & Dairy", unit: "count", unitLabel: "oz (28g)", protein: 4, fat: 18.5, satFat: 1.75, carbs: 4, calories: 190, note: "Single ingredient, raw — no onion" },
+  { id: "pecans", name: "Chopped Pecans", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 1, fat: 7, satFat: 0.6, carbs: 1.4 },
+  { id: "mixed-nuts", name: "Mixed Nuts", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 2, fat: 7, satFat: 1, carbs: 3 },
+  { id: "pumpkin-seeds", name: "Pumpkin Seeds", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 2.5, fat: 4, satFat: 0.7, carbs: 1.5 },
+  { id: "chocolate-chips", name: "Chocolate Chips (semisweet)", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 4, satFat: 2.4, carbs: 9 },
+  { id: "white-chocolate-chips", name: "White Chocolate Chips", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0.6, fat: 4.4, satFat: 2.7, carbs: 8.6 },
+  { id: "dark-chocolate", name: "Dark Chocolate", category: "Fats & Dairy", unit: "count", unitLabel: "oz", protein: 2, fat: 12, satFat: 7, carbs: 13 },
+  { id: "almond-milk", name: "Unsweetened Almond Milk", category: "Fats & Dairy", unit: "g", protein: 0.4, fat: 1.1, satFat: 0, carbs: 0.3 },
+  { id: "coconut-milk-light", name: "Light Coconut Milk", category: "Fats & Dairy", unit: "g", protein: 0.5, fat: 5, satFat: 4.5, carbs: 1.5 },
+  { id: "coconut-oil", name: "Coconut Oil", category: "Fats & Dairy", unit: "count", unitLabel: "tsp", protein: 0, fat: 4.5, satFat: 4, carbs: 0 },
+  { id: "sugar-free-pudding-mix", name: "Sugar-Free Pudding Mix (dry)", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0, fat: 0, satFat: 0, carbs: 2 },
+  { id: "protein-granola", name: "Protein Granola", category: "Fats & Dairy", unit: "count", unitLabel: "1/3 cup", protein: 10, fat: 5, satFat: 1, carbs: 20 },
+  { id: "low-fat-granola", name: "Low-Fat Granola", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0.6, fat: 0.5, satFat: 0.1, carbs: 6 },
+  { id: "kashi-blueberry-almond-granola", name: "Kashi Blueberry Almond Granola (Fiber + Prebiotics)", category: "Fats & Dairy", unit: "count", unitLabel: "2/3 cup (64g)", protein: 6, fat: 10, satFat: 1, carbs: 44, calories: 270, note: "Label: 9g fiber / 5g prebiotics per serving" },
+  { id: "whipped-topping", name: "Whipped Topping", category: "Fats & Dairy", unit: "count", unitLabel: "tbsp", protein: 0, fat: 1, satFat: 0.8, carbs: 1 },
+  { id: "milk_fairlife_2pct", name: "Fairlife 2% Ultra-Filtered Milk", category: "Fats & Dairy", unit: "g", protein: 5.42, fat: 1.88, satFat: 1.25, carbs: 2.5, calories: 50, note: "Lactose-free, ultra-filtered. Confirmed available at Fry's Food Stores." },
+  { id: "brazil-nut-simple-truth", name: "Brazil Nut (Simple Truth, single)", category: "Fats & Dairy", unit: "count", unitLabel: "nut", protein: 0.7, fat: 3.3, satFat: 0.8, carbs: 0.7, calories: 33, note: "Label: 1/4 cup (30g) = 200 cal / 4g P / 20g F / 5g sat ≈ 6 nuts — high in selenium" },
+  { id: "oat-milk-kirkland", name: "Kirkland Signature Organic Oat Milk", category: "Fats & Dairy", unit: "g", protein: 0.8, fat: 2.1, satFat: 0.2, carbs: 6.7, calories: 50, note: "Label confirmed from photo: 1 cup (240ml) = 120 cal / 2g P / 5g F (0.5g sat) / 16g C (2g fiber, 7g sugar) / 95mg sodium." },
+
+  // ---- Vegetables ----
+  { id: "broccoli", name: "Broccoli (steamed)", category: "Vegetables", unit: "g", protein: 3, fat: 0.4, satFat: 0.1, carbs: 7 },
+  { id: "spinach", name: "Spinach (sautéed)", category: "Vegetables", unit: "g", protein: 3, fat: 2, satFat: 0.3, carbs: 4 },
+  { id: "bell-peppers", name: "Mixed Bell Peppers", category: "Vegetables", unit: "g", protein: 1, fat: 0.3, satFat: 0, carbs: 6 },
+  { id: "asparagus", name: "Asparagus (steamed)", category: "Vegetables", unit: "g", protein: 2, fat: 0.2, satFat: 0, carbs: 4 },
+  { id: "green-beans", name: "Green Beans (steamed)", category: "Vegetables", unit: "g", protein: 2, fat: 0.2, satFat: 0, carbs: 7 },
+  { id: "cucumber", name: "Cucumber", category: "Vegetables", unit: "g", protein: 0.6, fat: 0.1, satFat: 0, carbs: 3.6 },
+  { id: "cherry-tomatoes", name: "Cherry Tomatoes", category: "Vegetables", unit: "g", protein: 0.9, fat: 0.2, satFat: 0, carbs: 3.9 },
+  { id: "tomato", name: "Tomato, sliced", category: "Vegetables", unit: "g", protein: 0.9, fat: 0.2, satFat: 0, carbs: 3.9 },
+  { id: "celery", name: "Celery", category: "Vegetables", unit: "g", protein: 0.7, fat: 0.2, satFat: 0, carbs: 3 },
+  { id: "romaine", name: "Romaine Lettuce, chopped", category: "Vegetables", unit: "g", protein: 1, fat: 0.2, satFat: 0, carbs: 2 },
+  { id: "mixed-greens", name: "Mixed Greens / Arugula", category: "Vegetables", unit: "g", protein: 1.4, fat: 0.2, satFat: 0, carbs: 2.9 },
+  { id: "shredded-cabbage", name: "Cabbage, shredded", category: "Vegetables", unit: "g", protein: 1.3, fat: 0.1, satFat: 0, carbs: 5.8 },
+  { id: "zucchini", name: "Zucchini, diced", category: "Vegetables", unit: "g", protein: 1.2, fat: 0.3, satFat: 0.1, carbs: 3.4 },
+  { id: "cauliflower", name: "Cauliflower, roasted", category: "Vegetables", unit: "g", protein: 2, fat: 0.3, satFat: 0, carbs: 5 },
+  { id: "carrot", name: "Carrot, shredded", category: "Vegetables", unit: "g", protein: 0.9, fat: 0.2, satFat: 0, carbs: 9.6 },
+  { id: "snap-peas", name: "Snap Peas", category: "Vegetables", unit: "g", protein: 2.8, fat: 0.2, satFat: 0, carbs: 7.6 },
+  { id: "bok-choy", name: "Bok Choy", category: "Vegetables", unit: "g", protein: 1.5, fat: 0.2, satFat: 0, carbs: 2.2 },
+  { id: "edamame", name: "Edamame, shelled", category: "Vegetables", unit: "g", protein: 11, fat: 5, satFat: 0.6, carbs: 10 },
+  { id: "corn", name: "Corn, frozen", category: "Vegetables", unit: "g", protein: 3.3, fat: 1.4, satFat: 0.2, carbs: 19 },
+  { id: "water-chestnuts", name: "Water Chestnuts, diced", category: "Vegetables", unit: "g", protein: 1.4, fat: 0.1, satFat: 0, carbs: 24 },
+
+  // ---- Fruits ----
+  { id: "blueberries", name: "Blueberries", category: "Fruits", unit: "g", protein: 0.7, fat: 0.3, satFat: 0, carbs: 14.5 },
+  { id: "strawberries", name: "Strawberries", category: "Fruits", unit: "g", protein: 0.7, fat: 0.3, satFat: 0, carbs: 8 },
+  { id: "raspberries", name: "Raspberries", category: "Fruits", unit: "g", protein: 1.2, fat: 0.7, satFat: 0, carbs: 12 },
+  { id: "blackberries", name: "Blackberries", category: "Fruits", unit: "g", protein: 1.4, fat: 0.5, satFat: 0, carbs: 9.6 },
+  { id: "mixed-berries", name: "Mixed Berries", category: "Fruits", unit: "g", protein: 0.8, fat: 0.4, satFat: 0, carbs: 12 },
+  { id: "grapes", name: "Grapes", category: "Fruits", unit: "g", protein: 0.6, fat: 0.2, satFat: 0, carbs: 18 },
+  { id: "grapes-green", name: "Green Grapes", category: "Fruits", unit: "g", protein: 0.7, fat: 0.2, satFat: 0, carbs: 18 },
+  { id: "grapes-purple", name: "Purple Grapes", category: "Fruits", unit: "g", protein: 0.6, fat: 0.2, satFat: 0, carbs: 17.5 },
+  { id: "apple", name: "Apple", category: "Fruits", unit: "count", unitLabel: "medium", protein: 0.5, fat: 0.3, satFat: 0.1, carbs: 25 },
+  { id: "pineapple", name: "Pineapple, chunks", category: "Fruits", unit: "g", protein: 0.5, fat: 0.1, satFat: 0, carbs: 13 },
+  { id: "mango", name: "Mango", category: "Fruits", unit: "g", protein: 0.8, fat: 0.4, satFat: 0.1, carbs: 15 },
+  { id: "peaches", name: "Peaches, sliced", category: "Fruits", unit: "g", protein: 0.9, fat: 0.3, satFat: 0, carbs: 10 },
+  { id: "cherries", name: "Cherries", category: "Fruits", unit: "g", protein: 1, fat: 0.3, satFat: 0, carbs: 16 },
+  { id: "dried-cranberries", name: "Dried Cranberries", category: "Fruits", unit: "count", unitLabel: "tbsp", protein: 0, fat: 0, satFat: 0, carbs: 8, calories: 33, note: "Sweetened" },
+  { id: "raisins", name: "Raisins", category: "Fruits", unit: "count", unitLabel: "tbsp", protein: 0.2, fat: 0, satFat: 0, carbs: 7 },
+  { id: "applesauce", name: "Applesauce, unsweetened", category: "Fruits", unit: "count", unitLabel: "1/4 cup", protein: 0.2, fat: 0, satFat: 0, carbs: 12 },
+
+  // ---- Seasonings ----
+  { id: "knorr-tomato-chicken-bouillon", name: "Knorr Tomato Bouillon w/ Chicken Flavor", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0, calories: 5, note: "860mg sodium/tsp — stir into rice for seasoned rice" },
+  { id: "garlic", name: "Garlic, fresh", category: "Seasonings", unit: "count", unitLabel: "clove", protein: 0.2, fat: 0, satFat: 0, carbs: 1 },
+  { id: "lemon", name: "Lemon", category: "Seasonings", unit: "count", protein: 1, fat: 0.3, satFat: 0, carbs: 9 },
+  { id: "lime", name: "Lime", category: "Seasonings", unit: "count", protein: 0.5, fat: 0.1, satFat: 0, carbs: 7 },
+  { id: "cinnamon", name: "Cinnamon", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.1, fat: 0, satFat: 0, carbs: 2 },
+  { id: "honey", name: "Honey", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.1, fat: 0, satFat: 0, carbs: 17 },
+  { id: "maple-syrup", name: "Maple Syrup", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 4.5 },
+  { id: "cocoa-powder", name: "Cocoa Powder, unsweetened", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 1, fat: 0.5, satFat: 0.3, carbs: 3 },
+  { id: "vanilla-extract", name: "Vanilla Extract", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0.5, calories: 12 },
+  { id: "baking-powder", name: "Baking Powder", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 1.2 },
+  { id: "chili-powder", name: "Chili Powder", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.9, fat: 1, satFat: 0.2, carbs: 4 },
+  { id: "cumin", name: "Cumin", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.4, fat: 0.5, satFat: 0, carbs: 0.9 },
+  { id: "smoked-paprika", name: "Smoked Paprika", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.3, fat: 0.3, satFat: 0, carbs: 1.2 },
+  { id: "garlic-powder", name: "Garlic Powder", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.5, fat: 0, satFat: 0, carbs: 2.3 },
+  { id: "italian-seasoning", name: "Italian Herbs / Seasoning", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.1, fat: 0.1, satFat: 0, carbs: 1 },
+  { id: "rosemary", name: "Rosemary, fresh", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0.5 },
+  { id: "dill", name: "Fresh Dill", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0.1 },
+  { id: "basil", name: "Fresh Basil", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0.1 },
+  { id: "cilantro", name: "Fresh Cilantro", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0, fat: 0, satFat: 0, carbs: 0.1 },
+  { id: "chives", name: "Fresh Chives", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.1, fat: 0, satFat: 0, carbs: 0.1 },
+  { id: "parsley", name: "Fresh Parsley", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.1, fat: 0, satFat: 0, carbs: 0.1 },
+  { id: "ginger", name: "Fresh Ginger, grated", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 1 },
+  { id: "red-pepper-flakes", name: "Red Pepper Flakes", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.1, fat: 0.2, satFat: 0, carbs: 1 },
+  { id: "salt-pepper", name: "Salt & Pepper (to taste)", category: "Seasonings", unit: "count", unitLabel: "pinch", protein: 0, fat: 0, satFat: 0, carbs: 0, calories: 0 },
+  { id: "cornstarch", name: "Cornstarch", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 2.4 },
+  { id: "sesame-seeds", name: "Sesame Seeds", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.5, fat: 1.4, satFat: 0.2, carbs: 0.7 },
+  { id: "chia-seeds", name: "Chia Seeds", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 1.7, fat: 3, satFat: 0.3, carbs: 4.1 },
+  { id: "flaxseed", name: "Ground Flaxseed", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 1.3, fat: 3, satFat: 0.3, carbs: 2 },
+  { id: "almond-butter", name: "Almond Butter", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 3.4, fat: 9, satFat: 0.7, carbs: 3 },
+  { id: "powdered-peanut-butter", name: "Powdered Peanut Butter (PB2)", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 3, fat: 0.5, satFat: 0.1, carbs: 3 },
+  { id: "hazelnut-butter", name: "Hazelnut Spread", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 2, fat: 9, satFat: 1.5, carbs: 8 },
+  { id: "taco-seasoning", name: "Taco Seasoning", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 1, fat: 0.5, satFat: 0.1, carbs: 4 },
+  { id: "ranch-seasoning", name: "Ranch Seasoning", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.2, fat: 0.2, satFat: 0, carbs: 1 },
+  { id: "fajita-seasoning", name: "Fajita Seasoning (no onion)", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 0.3, satFat: 0, carbs: 3 },
+  { id: "cajun-seasoning", name: "Cajun Seasoning", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 0.2, satFat: 0, carbs: 2 },
+  { id: "everything-bagel-seasoning", name: "Everything Bagel Seasoning", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.5, fat: 0.5, satFat: 0, carbs: 1 },
+  { id: "old-bay", name: "Old Bay Seasoning", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0.3 },
+  { id: "blackening-seasoning", name: "Blackening Seasoning", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.3, fat: 0.2, satFat: 0, carbs: 2.5 },
+  { id: "shawarma-spice", name: "Shawarma Spice Blend", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0.3, fat: 0.2, satFat: 0, carbs: 1.5 },
+  { id: "curry-powder", name: "Curry Powder", category: "Seasonings", unit: "count", unitLabel: "tbsp", protein: 0.9, fat: 1, satFat: 0.1, carbs: 3.7 },
+  { id: "kirkland-no-salt-seasoning", name: "Kirkland Signature Organic No-Salt Seasoning", category: "Seasonings", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 4, calories: 12, note: "22-ingredient blend led by dehydrated onion and garlic — background seasoning, not visible pieces, so it's fine by the house rule. Also contains mustard." },
+
+  // ---- Sauces & Condiments ----
+  { id: "salsa", name: "Salsa", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.2, fat: 0, satFat: 0, carbs: 1 },
+  { id: "kirkland-organic-salsa", name: "Kirkland Signature Organic Salsa, Medium", category: "Sauces & Condiments", unit: "count", unitLabel: "2 tbsp (31g)", protein: 0, fat: 0, satFat: 0, carbs: 2, calories: 10, note: "Onion is finely diced into the sauce, not a distinct piece/topping — fine by the house rule. ~35 servings/jar." },
+  { id: "fody-salsa", name: "Fody Low FODMAP Salsa", category: "Sauces & Condiments", unit: "count", unitLabel: "2 tbsp (30g)", protein: 0, fat: 0, satFat: 0, carbs: 2.5, calories: 12, note: "Onion-free entirely, for anyone who wants that instead. Specialty item — likely order online, not typically stocked at Costco/Fry's." },
+  { id: "tabasco-original", name: "Tabasco Original Red Pepper Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 0, calories: 0, note: "Only 3 ingredients: distilled vinegar, red pepper, salt — no onion/garlic. The reliable compliant hot sauce; Cholula and most other brands contain garlic (Green Pepper variant also has onion powder)." },
+  { id: "soy-sauce", name: "Soy Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 1.3, fat: 0, satFat: 0, carbs: 0.8 },
+  { id: "teriyaki-sauce", name: "Teriyaki Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.6, fat: 0, satFat: 0, carbs: 4 },
+  { id: "buffalo-sauce", name: "Buffalo Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0, fat: 1, satFat: 0.1, carbs: 1 },
+  { id: "bbq-sauce-sf", name: "Sugar-Free BBQ Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0, fat: 0, satFat: 0, carbs: 2 },
+  { id: "tzatziki", name: "Tzatziki", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 0.8, satFat: 0.5, carbs: 0.7 },
+  { id: "hoisin", name: "Hoisin Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.2, fat: 0.2, satFat: 0, carbs: 11 },
+  { id: "marinara", name: "Marinara Sauce (no onion)", category: "Sauces & Condiments", unit: "count", unitLabel: "1/4 cup", protein: 1.5, fat: 1.5, satFat: 0.2, carbs: 8 },
+  { id: "crushed-tomatoes", name: "Crushed Tomatoes", category: "Sauces & Condiments", unit: "g", protein: 1.2, fat: 0.3, satFat: 0, carbs: 4.6 },
+  { id: "tomato-sauce", name: "Tomato Sauce", category: "Sauces & Condiments", unit: "g", protein: 1.5, fat: 0.2, satFat: 0, carbs: 5 },
+  { id: "tomato-paste", name: "Tomato Paste", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 0.1, satFat: 0, carbs: 3.5 },
+  { id: "dijon-mustard", name: "Dijon Mustard", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 0.5, satFat: 0, carbs: 0.9 },
+  { id: "mustard", name: "Yellow Mustard", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.6, fat: 0.3, satFat: 0, carbs: 0.5, note: "No onion, but French's Classic Yellow contains garlic powder. Some Kroger-brand yellow mustards omit garlic too — check the label if avoiding garlic specifically." },
+  { id: "light-mayo", name: "Light Mayo", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0, fat: 3, satFat: 0.5, carbs: 1 },
+  { id: "mayo", name: "Mayo (regular)", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.1, fat: 10, satFat: 1.5, carbs: 0.1 },
+  { id: "light-caesar-dressing", name: "Light Caesar Dressing", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.3, fat: 3, satFat: 0.5, carbs: 1.5 },
+  { id: "light-ranch", name: "Light Ranch Dressing", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.2, fat: 3.5, satFat: 0.6, carbs: 1.5 },
+  { id: "balsamic-vinaigrette", name: "Balsamic Vinaigrette", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0, fat: 5, satFat: 0.7, carbs: 2 },
+  { id: "balsamic-glaze", name: "Balsamic Glaze", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.2, fat: 0, satFat: 0, carbs: 12 },
+  { id: "light-vinaigrette", name: "Light Vinaigrette", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0, fat: 2, satFat: 0.3, carbs: 2 },
+  { id: "basil-pesto", name: "Basil Pesto", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 1, fat: 8, satFat: 1.5, carbs: 1 },
+  { id: "hummus", name: "Hummus", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 1, fat: 1.3, satFat: 0.2, carbs: 2 },
+  { id: "tahini", name: "Tahini", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 2.6, fat: 8, satFat: 1.1, carbs: 3.2 },
+  { id: "cocktail-sauce", name: "Cocktail Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.3, fat: 0, satFat: 0, carbs: 6 },
+  { id: "greek-yogurt-tartar", name: "Greek Yogurt Tartar Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 1, satFat: 0.2, carbs: 1 },
+  { id: "chimichurri", name: "Chimichurri", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.1, fat: 7, satFat: 1, carbs: 0.5 },
+  { id: "worcestershire", name: "Worcestershire Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tsp", protein: 0, fat: 0, satFat: 0, carbs: 1 },
+  { id: "sriracha", name: "Sriracha", category: "Sauces & Condiments", unit: "count", unitLabel: "tsp", protein: 0.1, fat: 0, satFat: 0, carbs: 1 },
+  { id: "bulgogi-marinade", name: "Bulgogi Marinade", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 0.2, satFat: 0, carbs: 5 },
+  { id: "tikka-spice-paste", name: "Tikka Spice Paste", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.5, fat: 1, satFat: 0.2, carbs: 2 },
+  { id: "soy-ginger-dressing", name: "Soy-Ginger Dressing", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.3, fat: 1, satFat: 0.1, carbs: 2 },
+  { id: "sesame-sauce", name: "Sesame Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 1, fat: 4, satFat: 0.6, carbs: 2 },
+  { id: "chili-crunch", name: "Chili Crunch", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.3, fat: 6, satFat: 0.9, carbs: 1 },
+  { id: "white-miso", name: "White Miso Paste", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 1.4, fat: 0.5, satFat: 0.1, carbs: 3.7 },
+  { id: "beef-gravy", name: "Beef Gravy (no onion)", category: "Sauces & Condiments", unit: "count", unitLabel: "1/4 cup", protein: 1, fat: 1.5, satFat: 0.6, carbs: 3 },
+  { id: "red-enchilada-sauce", name: "Red Enchilada Sauce (no onion)", category: "Sauces & Condiments", unit: "count", unitLabel: "1/3 cup", protein: 1, fat: 2, satFat: 0.3, carbs: 6 },
+  { id: "light-burger-sauce", name: "Light Burger Sauce", category: "Sauces & Condiments", unit: "count", unitLabel: "tbsp", protein: 0.2, fat: 3, satFat: 0.5, carbs: 2 },
+  { id: "beef-broth", name: "Beef Broth", category: "Sauces & Condiments", unit: "g", protein: 1.5, fat: 0.3, satFat: 0.1, carbs: 0.3 },
+  { id: "chicken-broth", name: "Chicken Broth", category: "Sauces & Condiments", unit: "g", protein: 1.2, fat: 0.3, satFat: 0.1, carbs: 0.5 },
+
+  // ---- Beverages ----
+  { id: "monster-white-zero", name: "White Monster Zero Sugar (16oz can)", category: "Beverages", unit: "count", unitLabel: "can", protein: 0, fat: 0, satFat: 0, carbs: 6, calories: 10, note: "150mg caffeine — carbs are erythritol, not sugar" },
+  { id: "orange-juice-100", name: "Orange Juice (Member's Mark, 100%)", category: "Beverages", unit: "g", protein: 0.8, fat: 0, satFat: 0, carbs: 10.8 },
+  { id: "dole-pineapple-juice", name: "Pineapple Juice (Dole, 100%)", category: "Beverages", unit: "g", protein: 0.6, fat: 0, satFat: 0, carbs: 14, calories: 58, note: "Label: 6 fl oz (171g) = 100 cal / 24g C / 22g sugar, 0g added sugar" },
+  { id: "dole-pineapple-juice-light", name: "Pineapple Juice (Dole, Light)", category: "Beverages", unit: "g", protein: 0, fat: 0, satFat: 0, carbs: 6, calories: 23, note: "Label: 6 fl oz (171g) = 40 cal / 10g C / 9g sugar, 0g added sugar — 60% less sugar/calories than regular" },
+
+  // ---- Presets ----
+  { id: "shake-standard", name: "Protein Shake (2% Milk)", category: "Presets", unit: "count", unitLabel: "shake", protein: 45, fat: 8, satFat: 3, carbs: 15,
+    note: "12oz water + 12oz 2% milk + 1 scoop whey + 1 scoop collagen peptides" },
+  { id: "shake-fairlife-2pct", name: "Protein Shake (Fairlife 2%)", category: "Presets", unit: "count", unitLabel: "shake", protein: 52.5, fat: 7.25, satFat: 5, carbs: 6, calories: 309,
+    note: "12oz water + 12oz Fairlife 2% ultra-filtered milk + 1 scoop whey + 1 scoop collagen peptides" },
+  { id: "shake-water-only", name: "Protein Shake (Water Only)", category: "Presets", unit: "count", unitLabel: "shake", protein: 34, fat: 2, satFat: 0.3, carbs: 3,
+    note: "24oz water + 1 scoop whey + 1 scoop collagen peptides" },
+  { id: "shake-water-collagen", name: "Protein Shake (Water + Collagen)", category: "Presets", unit: "count", unitLabel: "shake", protein: 10, fat: 0, satFat: 0, carbs: 0,
+    note: "Water + 1 scoop collagen peptides" },
+  { id: "taylor-farms-creamy-italian-kit", name: "Taylor Farms Creamy Italian Chopped Kit (as prepared)", category: "Presets", unit: "count", unitLabel: "1 cup (100g)", protein: 4, fat: 15, satFat: 3, carbs: 10, calories: 190,
+    note: "Full kit as prepared — green/red cabbage, romaine, kale, carrot, croutons, parmesan/asiago/romano crumbles, creamy Italian dressing. ~3 servings per 11oz bag." }
+];
+// Generic ingredients get calories derived from macros (P*4 + C*4 + F*9) — the
+// standard approach, since there's no single "real" label behind a generic
+// entry to match. Branded/packaged foods set `calories` explicitly above
+// instead, matching their actual printed nutrition label exactly (which
+// accounts for fiber the way the flat formula doesn't).
+CALC_FOODS.forEach(function (f) { if (f.calories == null) f.calories = Math.round(f.protein * 4 + f.carbs * 4 + f.fat * 9); });
+
+var CALC_CATEGORIES = ["Protein", "Carbs", "Fats & Dairy", "Vegetables", "Fruits", "Seasonings", "Sauces & Condiments", "Beverages", "Presets"];
+
+// Targets are daily totals. Protein floor is a hard 185g minimum on either day type.
+// Edward dropped the Lift/Run day split (2026-11-23) — total calories and
+// macros only now, no training-day distinction. One flat daily target.
+var DAILY_TARGET = { label: "Daily Target", protein: 200, fat: 65, carbs: 230, calories: 2305, color: "var(--lime)" };
+var CALC_PROTEIN_FLOOR = 185;
+
+var CALC_SLOTS = ["Breakfast", "Lunch", "Dinner", "Snack 1", "Snack 2"];
+
+// ---------------------------------------------------------------------
+// State
+// ---------------------------------------------------------------------
+
+var state = {
+  // dayLog is the running total for today — every entry comes from the
+  // Custom Meal Calculator (kind:"food"), weighed out and logged by hand.
+  dayLog: [],
+  trayOpen: false,
+  showDrive: false,
+  showDisclaimer: true,
+  showMacros: false,
+  calcSlotAssign: "Breakfast",
+  calcWeightUnit: "oz",
+  calcSearch: "",
+  calcSavedMeals: [],
+  calcShowSaveBox: false,
+  calcSaveName: ""
+};
+
+function loadPersisted() {
+  try {
+    var saved = JSON.parse(localStorage.getItem("protein-playbook-daylog-v1") || "[]");
+    if (Array.isArray(saved)) state.dayLog = saved;
+  } catch (e) {}
+  try {
+    if (localStorage.getItem("protein-playbook-disclaimer-ack-v1") === "1") state.showDisclaimer = false;
+  } catch (e) {}
+  try {
+    var savedMeals = JSON.parse(localStorage.getItem("protein-playbook-calc-saved-v1") || "[]");
+    if (Array.isArray(savedMeals)) state.calcSavedMeals = savedMeals;
+  } catch (e) {}
+  try {
+    var wu = localStorage.getItem("protein-playbook-calc-weightunit-v1");
+    if (wu === "g" || wu === "oz") state.calcWeightUnit = wu;
+  } catch (e) {}
+}
+function ackDisclaimer() {
+  state.showDisclaimer = false;
+  try { localStorage.setItem("protein-playbook-disclaimer-ack-v1", "1"); } catch (e) {}
+  renderDisclaimer();
+}
+function saveDayLog() {
+  try { localStorage.setItem("protein-playbook-daylog-v1", JSON.stringify(state.dayLog)); } catch (e) {}
+}
+function saveCalcSavedMeals() {
+  try { localStorage.setItem("protein-playbook-calc-saved-v1", JSON.stringify(state.calcSavedMeals)); } catch (e) {}
+}
+
+// ---------------------------------------------------------------------
+// Utilities
+// ---------------------------------------------------------------------
+
+function esc(str) {
+  return String(str == null ? "" : str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+function $(id) { return document.getElementById(id); }
+
+// ---------------------------------------------------------------------
+// Derived business logic (mirrors the design's renderVals())
+// ---------------------------------------------------------------------
+
+function dayLogItemMacros(item) {
+  var food = calcFoodById(item.refId);
+  if (!food) return { protein: 0, fat: 0, carbs: 0, calories: 0, satFat: 0 };
+  var factor = food.unit === "g" ? (item.qty / 100) : item.qty;
+  return {
+    protein: food.protein * factor, fat: food.fat * factor, carbs: food.carbs * factor,
+    calories: food.calories * factor, satFat: (food.satFat || 0) * factor
+  };
+}
+
+function dayLogItemLabel(item) {
+  var food = calcFoodById(item.refId);
+  return food ? food.name : item.refId;
+}
+
+function dayTotals() {
+  var t = { protein: 0, fat: 0, carbs: 0, calories: 0, satFat: 0 };
+  state.dayLog.forEach(function (it) {
+    var m = dayLogItemMacros(it);
+    t.protein += m.protein; t.fat += m.fat; t.carbs += m.carbs; t.calories += m.calories; t.satFat += m.satFat;
+  });
+  return { protein: Math.round(t.protein), fat: Math.round(t.fat), carbs: Math.round(t.carbs), calories: Math.round(t.calories), satFat: Math.round(t.satFat) };
+}
+
+function proteinZone(protein) {
+  var target = DAILY_TARGET;
+  if (protein === 0) return { label: "Empty", color: "var(--text4)", hint: "Add meals or foods to start building your day." };
+  if (protein < CALC_PROTEIN_FLOOR) return { label: "Under floor", color: "var(--red)", hint: (CALC_PROTEIN_FLOOR - protein) + "g under the " + CALC_PROTEIN_FLOOR + "g hard floor." };
+  if (protein < target.protein) return { label: "Under target", color: "#7c9468", hint: (target.protein - protein) + "g under your " + target.label + " target." };
+  if (protein <= target.protein + 30) return { label: "On target", color: "var(--lime)", hint: "Clears the floor and on target for " + target.label + "." };
+  return { label: "Loaded", color: "var(--blue)", hint: "Well past target — plenty of protein banked." };
+}
+
+// ---------------------------------------------------------------------
+// Region renderers
+// ---------------------------------------------------------------------
+
+function renderDisclaimer() {
+  if (!state.showDisclaimer) { $("disclaimerContainer").innerHTML = ""; return; }
+  $("disclaimerContainer").innerHTML =
+    '<div data-noprint style="position:fixed; inset:0; z-index:999; background:rgba(8,9,10,0.94); display:flex; align-items:center; justify-content:center; padding:20px;">' +
+      '<div style="max-width:480px; width:100%; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 26px 24px; max-height:88vh; overflow-y:auto;">' +
+        '<div style="font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--lime); margin-bottom:10px; font-weight:600;">Before You Start</div>' +
+        '<h2 style="font-family:var(--cond); font-size:28px; font-weight:700; text-transform:uppercase; color:var(--text); margin:0 0 14px; line-height:1.05;">Personal Tool, Not Professional Advice</h2>' +
+        '<p style="font-size:14.5px; line-height:1.6; color:#3a3d33; margin:0 0 12px;">I’m not a registered dietitian, nutritionist, or medical professional. This food-tracking tool, its macro targets, and the 185g protein floor were built around my own body-recomposition goals, training schedule, and preferences — not clinical guidance for anyone else.</p>' +
+        '<p style="font-size:14.5px; line-height:1.6; color:#3a3d33; margin:0 0 12px;">Calorie and macro values are estimates from standard ingredient data, not lab-verified. Nutrition needs vary by person — talk to a doctor or registered dietitian before making significant changes to your diet, especially with any medical condition, allergy, or if pregnant or nursing.</p>' +
+        '<p style="font-size:13px; line-height:1.55; color:var(--text3); margin:0 0 22px;">By continuing, you understand this is a personal tracking tool, not medical or dietary advice.</p>' +
+        '<button data-action="ack-disclaimer" class="hover-lime-fill" style="cursor:pointer; width:100%; background:var(--lime); border:none; border-radius:10px; padding:13px 18px; font-family:var(--cond); font-size:17px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; color:#101214;">I Understand — Continue</button>' +
+      '</div>' +
+    '</div>';
+}
+
+function headerToggleBtn(action, hoverClass, accentVar, accentRgb, icon, active, onLabel, offLabel) {
+  var bg = active ? "rgba(" + accentRgb + ",0.14)" : "var(--card)";
+  var border = active ? "var(" + accentVar + ")" : "var(--border)";
+  var color = "var(--text)";
+  return '<button data-action="' + action + '" class="' + hoverClass + '" style="cursor:pointer; background:' + bg + '; border:1px solid ' + border + '; border-radius:10px; padding:11px 16px; color:' + color + '; font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; display:inline-flex; align-items:center; gap:8px;">' +
+    '<span style="color:var(' + accentVar + ');">' + icon + '</span> ' + (active ? onLabel : offLabel) +
+  '</button>';
+}
+
+function renderHeader() {
+  var html =
+    headerToggleBtn("toggle-drive", "hover-lime", "--lime", "82,115,74", "◆", state.showDrive, "Hide Drive Foods", "Drive & Libido Foods") +
+    headerToggleBtn("toggle-macros", "hover-pink", "--pink", "161,85,119", "▥", state.showMacros, "Hide Macros", "Daily Macros Breakdown");
+  $("headerButtons").innerHTML = html;
+  $("totalMealsBadge").textContent = CALC_FOODS.length + " foods in database";
+}
+
+function renderPanels() {
+  var out = "";
+
+  if (state.showDrive) {
+    var tiersHtml = DRIVE_TIERS.map(function (tier) {
+      var itemsHtml = tier.items.map(function (f) {
+        return '<div style="border-left:2px solid ' + tier.color + '; padding-left:12px;">' +
+          '<div style="display:flex; justify-content:space-between; align-items:baseline; gap:10px;">' +
+            '<span style="font-size:14.5px; font-weight:600; color:var(--text); line-height:1.25;">' + esc(f.food) + '</span>' +
+            '<span style="font-family:var(--mono); font-size:11px; color:var(--lime); flex:0 0 auto; text-align:right;">' + esc(f.freq) + '</span>' +
+          '</div>' +
+          '<div style="font-family:var(--mono); font-size:11px; color:var(--text3); margin-top:3px;">' + esc(f.amount) + '</div>' +
+          '<div style="font-size:12.5px; color:var(--text2); margin-top:5px; line-height:1.45;">' + esc(f.why) + '</div>' +
+        '</div>';
+      }).join("");
+      return '<div style="background:var(--card); padding:20px 22px;">' +
+        '<div style="display:flex; align-items:baseline; gap:8px; margin-bottom:14px;">' +
+          '<span style="font-family:var(--cond); font-size:22px; font-weight:700; text-transform:uppercase; color:' + tier.color + '; line-height:1;">' + esc(tier.name) + '</span>' +
+          '<span style="font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--text4);">' + esc(tier.tagline) + '</span>' +
+        '</div>' +
+        '<div style="display:flex; flex-direction:column; gap:14px;">' + itemsHtml + '</div>' +
+      '</div>';
+    }).join("");
+    var notesHtml = DRIVE_NOTES.map(function (n) {
+      return '<li style="font-size:13.5px; color:#3a3d33; padding-left:16px; position:relative; line-height:1.5;"><span style="position:absolute; left:0; top:8px; width:5px; height:5px; background:var(--lime); border-radius:50%;"></span>' + esc(n) + '</li>';
+    }).join("");
+    out += '<section style="max-width:1280px; margin:8px auto 0; padding:0 32px;">' +
+      '<div style="background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden;">' +
+        '<div style="padding:24px 26px 20px; border-bottom:1px solid var(--border);">' +
+          '<div style="font-family:var(--mono); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--lime); margin-bottom:8px; font-weight:600;">Foundation Support · Add to Recomp</div>' +
+          '<h2 style="font-family:var(--cond); font-size:34px; font-weight:700; text-transform:uppercase; color:var(--text); margin:0; line-height:0.95;">Drive & Libido Foods</h2>' +
+          '<p style="font-size:14px; line-height:1.6; color:var(--text2); margin:12px 0 0; max-width:720px;">Foundation-level support for libido, testosterone, and circulation. Associational data — supports the levers that move T (fat loss, sleep, cortisol), doesn’t drive them alone. Sorted for calorie efficiency in a deficit.</p>' +
+        '</div>' +
+        '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1px; background:var(--border);">' + tiersHtml + '</div>' +
+        '<div style="padding:20px 26px; border-top:1px solid var(--border); background:var(--panel2);">' +
+          '<div style="font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--lime); margin-bottom:10px; font-weight:600;">Build Notes</div>' +
+          '<ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px;">' + notesHtml + '</ul>' +
+          '<div style="margin-top:16px; padding:12px 14px; background:var(--card2); border-radius:8px; border-left:3px solid var(--pink);">' +
+            '<span style="font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--pink); font-weight:600;">◆ What counts as a dark berry</span>' +
+            '<div style="font-size:13.5px; color:#3a3d33; margin-top:5px; line-height:1.5;">' + esc(DARK_BERRIES_NOTE) + '</div>' +
+          '</div>' +
+          '<div style="margin-top:12px; padding:12px 14px; background:var(--card2); border-radius:8px; border-left:3px solid var(--orange);">' +
+            '<span style="font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--orange); font-weight:600;">Ceiling</span>' +
+            '<div style="font-size:13.5px; color:#3a3d33; margin-top:5px; line-height:1.5;">Food is foundation, not driver — fat loss, sleep, and cortisol control move your T more than any of this.</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</section>';
+  }
+
+  $("panelsContainer").innerHTML = out;
+}
+
+// ---------------------------------------------------------------------
+// Custom Meal Calculator — logic
+// ---------------------------------------------------------------------
+
+function calcFoodById(id) { return CALC_FOODS.find(function (f) { return f.id === id; }); }
+
+function calcMacroZone(current, target, tolerance) {
+  var remaining = target - current;
+  if (remaining < 0) return { color: "var(--red)", label: "over" };
+  if (remaining <= tolerance) return { color: "var(--lime)", label: "near" };
+  return { color: "var(--text3)", label: "under" };
+}
+
+function calcBar(label, unit, current, target, tolerance) {
+  var zone = calcMacroZone(current, target, tolerance);
+  var pct = Math.min((current / target) * 100, 100).toFixed(1) + "%";
+  var remaining = target - current;
+  var remainingText = remaining >= 0
+    ? (remaining + unit + " " + label.toLowerCase() + " remaining")
+    : (Math.abs(remaining) + unit + " over target");
+  return '<div>' +
+    '<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:5px;">' +
+      '<span style="font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text3);">' + esc(label) + '</span>' +
+      '<span style="font-family:var(--cond); font-size:15px; font-weight:600; color:' + zone.color + ';">' + current + unit + '<span style="color:var(--text4); font-weight:400;"> / ' + target + unit + '</span></span>' +
+    '</div>' +
+    '<div style="position:relative; height:8px; background:var(--card2); border-radius:20px; overflow:hidden;">' +
+      '<div style="height:100%; width:' + pct + '; background:' + zone.color + '; border-radius:20px; transition:width 0.3s ease;"></div>' +
+    '</div>' +
+    '<div style="font-family:var(--mono); font-size:10.5px; color:' + (remaining < 0 ? "var(--red)" : "var(--text3)") + '; margin-top:4px;">' + remainingText + '</div>' +
+  '</div>';
+}
+
+function calcGenUid() { return "ci" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+
+function toggleMacros() {
+  state.showMacros = !state.showMacros;
+  renderHeader();
+  renderMacrosPanel();
+  if (state.showMacros) { var el = $("macrosContainer"); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+}
+
+// Full-width interactive bar for Protein / Carbs / Calories — turns red past target.
+function macroFullBar(label, unit, current, target, tolerance) {
+  var zone = calcMacroZone(current, target, tolerance);
+  var pct = Math.min((current / target) * 100, 100).toFixed(1) + "%";
+  var remaining = target - current;
+  var remainingText = remaining >= 0
+    ? (remaining + unit + " " + label.toLowerCase() + " remaining")
+    : (Math.abs(remaining) + unit + " over your " + label.toLowerCase() + " target");
+  return '<div style="margin-bottom:22px;">' +
+    '<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px;">' +
+      '<span style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3);">' + esc(label) + '</span>' +
+      '<span style="font-family:var(--cond); font-size:19px; font-weight:700; color:' + zone.color + ';">' + current + unit + '<span style="color:var(--text4); font-weight:400; font-size:14px;"> / ' + target + unit + '</span></span>' +
+    '</div>' +
+    '<div style="position:relative; height:10px; background:var(--card2); border-radius:20px; overflow:hidden;">' +
+      '<div style="height:100%; width:' + pct + '; background:' + zone.color + '; border-radius:20px; transition:width 0.3s ease;"></div>' +
+    '</div>' +
+    '<div style="font-family:var(--mono); font-size:11px; color:' + (remaining < 0 ? "var(--red)" : "var(--text3)") + '; margin-top:6px;">' + remainingText + '</div>' +
+  '</div>';
+}
+
+// Fat gets its own bar, split into unsaturated (the ones you want more of) and
+// saturated (the ones to watch) — the split shows composition regardless of
+// total, while the number itself turns red once total fat clears the target.
+function macroFatBar(current, satCurrent, target) {
+  var unsatCurrent = Math.max(current - satCurrent, 0);
+  var overTarget = current > target;
+  var totalPct = Math.min((current / target) * 100, 100);
+  var unsatPct = current > 0 ? (unsatCurrent / current) * totalPct : 0;
+  var satPct = current > 0 ? (satCurrent / current) * totalPct : 0;
+  var remaining = target - current;
+  var remainingText = remaining >= 0 ? (remaining + "g fat remaining") : (Math.abs(remaining) + "g over your fat target");
+  return '<div style="margin-bottom:22px;">' +
+    '<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px;">' +
+      '<span style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3);">Fat</span>' +
+      '<span style="font-family:var(--cond); font-size:19px; font-weight:700; color:' + (overTarget ? "var(--red)" : "var(--text)") + ';">' + current + 'g<span style="color:var(--text4); font-weight:400; font-size:14px;"> / ' + target + 'g</span></span>' +
+    '</div>' +
+    '<div style="position:relative; height:10px; background:var(--card2); border-radius:20px; overflow:hidden; display:flex;">' +
+      '<div style="height:100%; width:' + unsatPct.toFixed(1) + '%; background:var(--lime); transition:width 0.3s ease;"></div>' +
+      '<div style="height:100%; width:' + satPct.toFixed(1) + '%; background:var(--orange); transition:width 0.3s ease;"></div>' +
+    '</div>' +
+    '<div style="display:flex; justify-content:space-between; margin-top:6px; font-family:var(--mono); font-size:11px; flex-wrap:wrap; gap:6px;">' +
+      '<span style="color:var(--text3);"><span style="color:var(--lime);">■</span> ' + unsatCurrent + 'g unsaturated <span style="color:var(--orange); margin-left:10px;">■</span> ' + satCurrent + 'g saturated</span>' +
+      '<span style="color:' + (remaining < 0 ? "var(--red)" : "var(--text3)") + ';">' + remainingText + '</span>' +
+    '</div>' +
+  '</div>';
+}
+
+function renderMacrosPanel() {
+  var el = $("macrosContainer");
+  if (!el) return;
+  if (!state.showMacros) { el.innerHTML = ""; return; }
+
+  var st = dayTotals();
+  var target = DAILY_TARGET;
+
+  el.innerHTML =
+    '<section style="max-width:1280px; margin:8px auto 0; padding:0 32px;">' +
+      '<div style="background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden;">' +
+        '<div style="padding:24px 26px 18px; border-bottom:1px solid var(--border);">' +
+          '<div style="font-family:var(--mono); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--pink); margin-bottom:8px; font-weight:600;">Live Daily Macros</div>' +
+          '<h2 style="font-family:var(--cond); font-size:34px; font-weight:700; text-transform:uppercase; color:var(--text); margin:0; line-height:0.95;">Today’s Breakdown</h2>' +
+          '<p style="font-size:14px; line-height:1.6; color:var(--text2); margin:12px 0 0; max-width:760px;">Tracking against <strong style="color:var(--text);">' + target.label + '</strong> — ' + target.protein + 'g P · ' + target.fat + 'g F · ' + target.carbs + 'g C · ' + target.calories + ' cal. Every bar turns red once you clear that day’s target. Fat splits into mono/polyunsaturated (the ones you want more of) vs. saturated (the ones to watch) — same split shown per food in the Custom Meal Calculator.</p>' +
+        '</div>' +
+        '<div style="padding:24px 26px 6px;">' +
+          macroFullBar("Protein", "g", st.protein, target.protein, 10) +
+          macroFatBar(st.fat, st.satFat, target.fat) +
+          macroFullBar("Carbs", "g", st.carbs, target.carbs, 10) +
+          macroFullBar("Calories", "", st.calories, target.calories, 50) +
+        '</div>' +
+      '</div>' +
+    '</section>';
+}
+
+function calcAddFood(foodId) {
+  var food = calcFoodById(foodId);
+  if (!food) return;
+  var addQty;
+  if (food.unit === "g") {
+    var qtyInput = $("calc-qty-" + foodId);
+    var raw = qtyInput ? parseFloat(qtyInput.value) : NaN;
+    if (state.calcWeightUnit === "g") {
+      if (!raw || raw <= 0) raw = 100;
+      addQty = Math.round(raw);
+    } else {
+      if (!raw || raw <= 0) raw = 4;
+      addQty = Math.round(raw * 28.3495);
+    }
+  } else {
+    addQty = 1;
+  }
+  var existing = state.dayLog.find(function (it) {
+    return it.kind === "food" && it.refId === foodId && it.slot === state.calcSlotAssign;
+  });
+  if (existing) existing.qty += addQty;
+  else state.dayLog.push({ uid: calcGenUid(), kind: "food", refId: foodId, qty: addQty, slot: state.calcSlotAssign });
+  saveDayLog();
+  renderScoreboard();
+  renderTray();
+}
+
+function dayLogStep(uid, dir) {
+  var item = state.dayLog.find(function (it) { return it.uid === uid; });
+  if (!item) return;
+  var step = 1;
+  if (item.kind === "food") {
+    var food = calcFoodById(item.refId);
+    step = food && food.unit === "g" ? 25 : 1;
+  }
+  item.qty = Math.max(step, item.qty + dir * step);
+  saveDayLog();
+  renderScoreboard();
+  renderTray();
+}
+
+function dayLogRemove(uid) {
+  state.dayLog = state.dayLog.filter(function (it) { return it.uid !== uid; });
+  saveDayLog();
+  renderScoreboard();
+  renderTray();
+}
+
+function dayLogSetSlot(uid, slot) {
+  var item = state.dayLog.find(function (it) { return it.uid === uid; });
+  if (!item) return;
+  item.slot = slot;
+  saveDayLog();
+  renderTray();
+}
+
+function calcSetAddSlot(slot) { state.calcSlotAssign = slot; renderCalcFoodList(); }
+
+function calcSetWeightUnit(unit) {
+  if (unit !== "g" && unit !== "oz") return;
+  state.calcWeightUnit = unit;
+  try { localStorage.setItem("protein-playbook-calc-weightunit-v1", unit); } catch (e) {}
+  renderCalcFoodList();
+}
+
+function calcOnSearch(val) { state.calcSearch = val; renderCalcFoodList(); }
+
+function calcToggleSaveBox() { state.calcShowSaveBox = !state.calcShowSaveBox; renderCalcSavedMeals(); }
+
+function calcSaveMeal() {
+  var name = (state.calcSaveName || "").trim();
+  if (!name) return;
+  var foodItems = state.dayLog.filter(function (it) { return it.kind === "food"; });
+  if (foodItems.length === 0) return;
+  state.calcSavedMeals.push({
+    uid: calcGenUid(),
+    name: name,
+    items: foodItems.map(function (it) { return { foodId: it.refId, qty: it.qty, slot: it.slot }; })
+  });
+  saveCalcSavedMeals();
+  state.calcSaveName = "";
+  state.calcShowSaveBox = false;
+  renderCalcSavedMeals();
+}
+
+function calcLoadSavedMeal(uid) {
+  var meal = state.calcSavedMeals.find(function (m) { return m.uid === uid; });
+  if (!meal) return;
+  meal.items.forEach(function (it) {
+    state.dayLog.push({ uid: calcGenUid(), kind: "food", refId: it.foodId, qty: it.qty, slot: it.slot });
+  });
+  saveDayLog();
+  renderScoreboard();
+  renderTray();
+}
+
+function calcDeleteSavedMeal(uid) {
+  state.calcSavedMeals = state.calcSavedMeals.filter(function (m) { return m.uid !== uid; });
+  saveCalcSavedMeals();
+  renderCalcSavedMeals();
+}
+
+function calcSaveNameInput(val) { state.calcSaveName = val; }
+
+// ---- rendering ----
+
+function renderCalcFoodList() {
+  var el = $("calcFoodListWrapper");
+  if (!el) return;
+  var q = state.calcSearch.trim().toLowerCase();
+  var filtered = CALC_FOODS.filter(function (f) { return !q || f.name.toLowerCase().indexOf(q) !== -1; });
+
+  if (filtered.length === 0) {
+    el.innerHTML = '<div style="padding:20px 0; text-align:center; color:var(--text4); font-size:13.5px;">No foods match that search.</div>';
+    return;
+  }
+
+  var html = CALC_CATEGORIES.map(function (cat) {
+    var items = filtered.filter(function (f) { return f.category === cat; });
+    if (items.length === 0) return "";
+    var rows = items.map(function (f) {
+      var unitLabel = f.unit === "g" ? "100g" : "1 " + (f.unitLabel || "×");
+      var satShare = f.fat > 0 ? f.satFat / f.fat : 0;
+      var satColor = satShare > 0.55 ? "var(--red)" : (satShare > 0 ? "var(--text3)" : "var(--text4)");
+      var fatDisplay = f.fat + "g F<span style=\"color:" + satColor + ";\"> (" + f.satFat + "g sat)</span>";
+      var wu = state.calcWeightUnit;
+      var wuDefault = wu === "g" ? "100" : "4";
+      var wuStep = wu === "g" ? "5" : "0.5";
+      var wuMin = wu === "g" ? "1" : "0.5";
+      var addControl = f.unit === "g"
+        ? '<div style="display:flex; align-items:center; gap:6px; flex:0 0 auto;">' +
+            '<input type="number" id="calc-qty-' + f.id + '" value="' + wuDefault + '" min="' + wuMin + '" step="' + wuStep + '" inputmode="decimal" style="width:48px; background:var(--card); border:1px solid var(--border); border-radius:6px; padding:6px 4px; color:var(--text); font-family:var(--mono); font-size:11px; text-align:center;">' +
+            '<span style="font-family:var(--mono); font-size:9px; color:var(--text3); text-transform:uppercase;">' + wu + '</span>' +
+            '<button data-action="calc-add-food" data-food-id="' + f.id + '" class="hover-lime-fill" style="cursor:pointer; background:var(--lime); border:none; border-radius:8px; padding:7px 12px; color:#101214; font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">+ Add</button>' +
+          '</div>'
+        : '<button data-action="calc-add-food" data-food-id="' + f.id + '" class="hover-lime-fill" style="cursor:pointer; flex:0 0 auto; background:var(--lime); border:none; border-radius:8px; padding:7px 12px; color:#101214; font-family:var(--mono); font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">+ Add</button>';
+      return '<div class="calc-food-row" style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; margin-bottom:7px; flex-wrap:wrap;">' +
+        '<div style="flex:1; min-width:180px;">' +
+          '<div style="font-size:13.5px; font-weight:600; color:var(--text);">' + esc(f.name) + '</div>' +
+          '<div style="font-family:var(--mono); font-size:10px; color:var(--text3); margin-top:2px;">per ' + unitLabel + ' · ' + f.protein + 'g P · ' + fatDisplay + ' · ' + f.carbs + 'g C · ' + f.calories + ' cal' + (f.note ? " · " + esc(f.note) : "") + '</div>' +
+        '</div>' +
+        addControl +
+      '</div>';
+    }).join("");
+    return '<div style="margin-bottom:16px;">' +
+      '<div style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3); margin-bottom:2px;">' + cat + '</div>' +
+      rows +
+    '</div>';
+  }).join("");
+
+  el.innerHTML = html;
+}
+
+function renderCalcSavedMeals() {
+  var el = $("calcSavedMealsWrapper");
+  if (!el) return;
+
+  var listHtml = state.calcSavedMeals.length === 0
+    ? '<div style="font-size:13px; color:var(--text4);">No saved meals yet.</div>'
+    : state.calcSavedMeals.map(function (m) {
+        return '<div style="display:flex; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid #e2e0d5;">' +
+          '<div style="flex:1; font-size:13.5px; font-weight:600; color:var(--text);">' + esc(m.name) + ' <span style="font-family:var(--mono); font-size:10.5px; color:var(--text3); font-weight:400;">(' + m.items.length + ' items)</span></div>' +
+          '<button data-action="calc-load-saved" data-uid="' + m.uid + '" class="hover-lime-text" style="cursor:pointer; background:none; border:1px solid var(--border); border-radius:7px; padding:6px 11px; color:var(--text2); font-family:var(--mono); font-size:10px; letter-spacing:0.04em; text-transform:uppercase;">Load</button>' +
+          '<button data-action="calc-delete-saved" data-uid="' + m.uid + '" class="hover-red" style="cursor:pointer; background:none; border:1px solid var(--border); border-radius:7px; width:28px; height:28px; color:var(--text3); font-size:13px;">✕</button>' +
+        '</div>';
+      }).join("");
+
+  var saveBoxHtml = state.calcShowSaveBox
+    ? '<div style="display:flex; gap:8px; margin-top:10px;">' +
+        '<input type="text" id="calcSaveNameInput" placeholder="Name this combo…" value="' + esc(state.calcSaveName) + '" style="flex:1; background:var(--card2); border:1px solid var(--border); border-radius:8px; padding:8px 12px; color:var(--text); font-family:var(--body); font-size:13px;">' +
+        '<button data-action="calc-save-meal" class="hover-lime-fill" style="cursor:pointer; background:var(--lime); border:none; border-radius:8px; padding:8px 14px; color:#101214; font-family:var(--mono); font-size:11px; font-weight:700; text-transform:uppercase;">Save</button>' +
+      '</div>'
+    : "";
+
+  el.innerHTML =
+    '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">' +
+      '<div style="font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--lime);">Saved Meals</div>' +
+      '<button data-action="calc-toggle-save-box" class="hover-lime-text" style="cursor:pointer; background:none; border:1px solid var(--border); border-radius:7px; padding:6px 12px; color:var(--text2); font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase;">' + (state.calcShowSaveBox ? "Cancel" : "+ Save Foods As Combo") + '</button>' +
+    '</div>' +
+    listHtml + saveBoxHtml;
+}
+
+function renderCalculatorShell() {
+  var slotOptions = CALC_SLOTS.map(function (s) {
+    return '<option value="' + s + '"' + (s === state.calcSlotAssign ? " selected" : "") + '>' + s + '</option>';
+  }).join("");
+
+  $("calculatorContainer").innerHTML =
+    '<section style="max-width:1280px; margin:8px auto 0; padding:0 32px;">' +
+      '<div style="background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden;">' +
+        '<div style="padding:24px 26px 20px; border-bottom:1px solid var(--border);">' +
+          '<div style="font-family:var(--mono); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--orange); margin-bottom:8px; font-weight:600;">Build Your Own · Not A Recipe</div>' +
+          '<h2 style="font-family:var(--cond); font-size:34px; font-weight:700; text-transform:uppercase; color:var(--text); margin:0; line-height:0.95;">Custom Meal Calculator</h2>' +
+          '<p style="font-size:14px; line-height:1.6; color:var(--text2); margin:12px 0 0; max-width:760px;">Search for a food, weigh it out, and log it — everything you add sums into the scoreboard at the bottom of the screen. Search for a raw ingredient, or build up a combo (like a burrito: tortilla + beans + meat) and save it as one reusable item.</p>' +
+        '</div>' +
+
+        '<div style="padding:22px 26px; border-bottom:1px solid var(--border); background:var(--panel2);" id="calcSavedMealsWrapper"></div>' +
+
+        '<div style="padding:22px 26px;">' +
+          '<div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-bottom:14px;">' +
+            '<input type="text" id="calcSearchInput" placeholder="Search the food database…" style="flex:1; min-width:200px; background:var(--card2); border:1px solid var(--border); border-radius:10px; padding:10px 14px; color:var(--text); font-family:var(--body); font-size:14px;">' +
+            '<div style="display:flex; align-items:center; gap:8px;">' +
+              '<span style="font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--text3);">Weigh in</span>' +
+              '<div style="display:flex; border:1px solid var(--border); border-radius:8px; overflow:hidden;">' +
+                '<button data-action="calc-set-weight-unit" data-unit="oz" style="cursor:pointer; border:none; padding:7px 11px; font-family:var(--mono); font-size:11px; font-weight:600; text-transform:uppercase; background:' + (state.calcWeightUnit === "oz" ? "var(--lime)" : "var(--card2)") + '; color:' + (state.calcWeightUnit === "oz" ? "#101214" : "var(--text2)") + ';">oz</button>' +
+                '<button data-action="calc-set-weight-unit" data-unit="g" style="cursor:pointer; border:none; border-left:1px solid var(--border); padding:7px 11px; font-family:var(--mono); font-size:11px; font-weight:600; text-transform:uppercase; background:' + (state.calcWeightUnit === "g" ? "var(--lime)" : "var(--card2)") + '; color:' + (state.calcWeightUnit === "g" ? "#101214" : "var(--text2)") + ';">g</button>' +
+              '</div>' +
+            '</div>' +
+            '<div style="display:flex; align-items:center; gap:8px;">' +
+              '<span style="font-family:var(--mono); font-size:10px; letter-spacing:0.06em; text-transform:uppercase; color:var(--text3);">Add to</span>' +
+              '<select id="calcSlotSelect" data-action="calc-set-add-slot" style="background:var(--card2); border:1px solid var(--border); border-radius:8px; padding:7px 10px; color:var(--text); font-family:var(--mono); font-size:11px;">' + slotOptions + '</select>' +
+            '</div>' +
+          '</div>' +
+          '<div id="calcFoodListWrapper"></div>' +
+        '</div>' +
+      '</div>' +
+    '</section>';
+
+  renderCalcSavedMeals();
+  renderCalcFoodList();
+}
+
+function renderTray() {
+  if (!state.trayOpen) { $("trayContainer").innerHTML = ""; return; }
+
+  var itemsHtml;
+  if (state.dayLog.length === 0) {
+    itemsHtml = '<div style="padding:32px 0; text-align:center; color:var(--text4); font-family:var(--body); font-size:15px;">Nothing logged yet — use the Custom Meal Calculator above to add a food.</div>';
+  } else {
+    var slotGroups = { "Unassigned": [] };
+    CALC_SLOTS.forEach(function (s) { slotGroups[s] = []; });
+    state.dayLog.forEach(function (it) { slotGroups[it.slot || "Unassigned"].push(it); });
+
+    var order = ["Unassigned"].concat(CALC_SLOTS);
+    itemsHtml = order.filter(function (s) { return slotGroups[s].length > 0; }).map(function (slot) {
+      var rows = slotGroups[slot].map(function (it) {
+        var m = dayLogItemMacros(it);
+        var label = dayLogItemLabel(it);
+        var food = calcFoodById(it.refId);
+        var qtyLabel = food.unit === "g" ? (it.qty + "g") : (it.qty + " " + (food.unitLabel || "×"));
+        var midCount = "";
+        var slotOptions = order.map(function (s) {
+          var val = s === "Unassigned" ? "" : s;
+          var sel = (it.slot || "Unassigned") === s ? " selected" : "";
+          return '<option value="' + val + '"' + sel + '>' + s + '</option>';
+        }).join("");
+        return '<div style="display:flex; align-items:center; gap:10px; padding:11px 0; border-bottom:1px solid #e2e0d5; flex-wrap:wrap;">' +
+          '<div style="flex:1; min-width:150px;">' +
+            '<div style="font-family:var(--cond); font-size:17px; font-weight:600; text-transform:uppercase; color:var(--text); line-height:1.15;">' + esc(label) + '</div>' +
+            '<div style="font-family:var(--mono); font-size:10.5px; color:var(--text3); margin-top:3px;">' + qtyLabel + ' · ' + Math.round(m.protein) + 'g P · ' + Math.round(m.calories) + ' cal</div>' +
+          '</div>' +
+          '<select data-action="daylog-set-slot" data-uid="' + it.uid + '" style="background:var(--card2); border:1px solid var(--border); border-radius:6px; padding:5px 7px; color:var(--text2); font-family:var(--mono); font-size:10px;">' + slotOptions + '</select>' +
+          '<div style="display:flex; align-items:center; gap:6px;">' +
+            '<button class="qty-btn hover-step" style="width:28px; height:28px; font-size:16px;" data-action="daylog-step" data-uid="' + it.uid + '" data-dir="-1">–</button>' +
+            midCount +
+            '<button class="qty-btn hover-step" style="width:28px; height:28px; font-size:16px;" data-action="daylog-step" data-uid="' + it.uid + '" data-dir="1">+</button>' +
+            '<button data-action="daylog-remove" data-uid="' + it.uid + '" class="hover-red" style="cursor:pointer; background:none; border:1px solid var(--border); border-radius:6px; width:28px; height:28px; color:var(--text3); font-size:13px;">✕</button>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+      return '<div style="margin-bottom:14px;">' +
+        '<div style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--lime); margin-bottom:2px;">' + slot + '</div>' +
+        rows +
+      '</div>';
+    }).join("");
+  }
+
+  // Position the tray exactly above the fixed footer's actual rendered height
+  // (which varies between the compact mobile layout, the fuller desktop one,
+  // and the iPhone home-indicator safe-area inset) rather than a guessed number.
+  var sbEl = $("scoreboardContainer");
+  var footerH = sbEl ? sbEl.getBoundingClientRect().height : 104;
+
+  $("trayContainer").innerHTML =
+    '<div style="position:fixed; left:0; right:0; bottom:' + footerH + 'px; z-index:40; display:flex; justify-content:center; padding:0 16px;">' +
+      '<div style="width:100%; max-width:760px; background:var(--card); border:1px solid var(--border); border-radius:16px 16px 0 0; box-shadow:0 -20px 60px rgba(0,0,0,0.12); animation:trayUp 0.22s ease; max-height:52vh; display:flex; flex-direction:column;">' +
+        '<div style="display:flex; justify-content:space-between; align-items:center; padding:18px 22px; border-bottom:1px solid var(--border);">' +
+          '<div style="font-family:var(--cond); font-size:24px; font-weight:600; text-transform:uppercase; color:var(--text);">Today’s Log</div>' +
+          '<button data-action="clear-day" class="hover-red" style="cursor:pointer; background:none; border:1px solid var(--border); border-radius:8px; padding:6px 12px; color:var(--text3); font-family:var(--mono); font-size:10px; letter-spacing:0.1em; text-transform:uppercase;">Clear all</button>' +
+        '</div>' +
+        '<div style="overflow-y:auto; padding:8px 22px 18px;">' + itemsHtml + '</div>' +
+      '</div>' +
+    '</div>';
+}
+
+function renderScoreboard() {
+  var st = dayTotals();
+  var target = DAILY_TARGET;
+  var zone = proteinZone(st.protein);
+  var maxScale = target.protein + 60;
+  var fillPct = Math.min((st.protein / maxScale) * 100, 100).toFixed(1) + "%";
+  var floorPct = ((CALC_PROTEIN_FLOOR / maxScale) * 100).toFixed(1) + "%";
+
+  // Fat, carbs and calories are colored against the daily target the same
+  // way the calculator's bars are, so the scoreboard flags "you're already
+  // close to your fat budget" instead of just a raw number — and the
+  // saturated portion is broken out separately underneath, since a gram of
+  // olive oil isn't the same as a gram of butter.
+  var calZone = calcMacroZone(st.calories, target.calories, 50);
+  var carbZone = calcMacroZone(st.carbs, target.carbs, 10);
+  var fatZone = calcMacroZone(st.fat, target.fat, 10);
+  var satShare = st.fat > 0 ? st.satFat / st.fat : 0;
+  var satColor = satShare > 0.55 ? "var(--red)" : "var(--text3)";
+
+  var trayLabel = state.trayOpen ? "Hide day" : "View day";
+
+  var desktopHtml =
+    '<div class="sb-desktop" style="max-width:1280px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; gap:24px; flex-wrap:wrap;">' +
+      '<div style="flex:0 0 auto;">' +
+        '<div style="font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text3);">' + target.label + ' · ' + esc(zone.label) + '</div>' +
+        '<div style="display:flex; align-items:baseline; gap:8px;">' +
+          '<span style="font-family:var(--cond); font-size:44px; font-weight:700; color:' + zone.color + '; line-height:0.9;">' + st.protein + '</span>' +
+          '<span style="font-family:var(--cond); font-size:20px; color:var(--text4);">/ ' + target.protein + 'g</span>' +
+        '</div>' +
+      '</div>' +
+      '<div style="flex:1; min-width:220px;">' +
+        '<div style="position:relative; height:12px; background:var(--card2); border-radius:20px; overflow:hidden;">' +
+          '<div style="position:absolute; top:-3px; bottom:-3px; width:2px; left:' + floorPct + '; background:var(--red); opacity:0.55;"></div>' +
+          '<div style="height:100%; width:' + fillPct + '; background:' + zone.color + '; border-radius:20px; transition:width 0.3s ease;"></div>' +
+        '</div>' +
+        '<div style="display:flex; justify-content:space-between; margin-top:6px;">' +
+          '<div style="font-family:var(--mono); font-size:11px; color:var(--text3);">' + esc(zone.hint) + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="display:flex; gap:18px; flex:0 0 auto;">' +
+        '<div style="text-align:center;">' +
+          '<div style="font-family:var(--cond); font-size:24px; font-weight:600; color:' + calZone.color + '; line-height:1;">' + st.calories + '</div>' +
+          '<div style="font-family:var(--mono); font-size:9px; letter-spacing:0.06em; color:var(--text4); text-transform:uppercase;">/ ' + target.calories + ' cal</div>' +
+        '</div>' +
+        '<div style="text-align:center;">' +
+          '<div style="font-family:var(--cond); font-size:24px; font-weight:600; color:' + carbZone.color + '; line-height:1;">' + st.carbs + '</div>' +
+          '<div style="font-family:var(--mono); font-size:9px; letter-spacing:0.06em; color:var(--text4); text-transform:uppercase;">/ ' + target.carbs + 'g carbs</div>' +
+        '</div>' +
+        '<div style="text-align:center;">' +
+          '<div style="font-family:var(--cond); font-size:24px; font-weight:600; color:' + fatZone.color + '; line-height:1;">' + st.fat + '</div>' +
+          '<div style="font-family:var(--mono); font-size:9px; letter-spacing:0.06em; color:var(--text4); text-transform:uppercase;">/ ' + target.fat + 'g fat</div>' +
+          '<div style="font-family:var(--mono); font-size:8.5px; color:' + satColor + '; margin-top:1px;">' + st.satFat + 'g sat</div>' +
+        '</div>' +
+      '</div>' +
+      '<button data-action="toggle-tray" style="cursor:pointer; flex:0 0 auto; background:var(--lime); border:none; border-radius:10px; padding:12px 20px; font-family:var(--cond); font-size:18px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:#101214;">' + trayLabel + ' <span style="font-family:var(--mono); font-size:13px;">(' + state.dayLog.length + ')</span></button>' +
+    '</div>';
+
+  // Compact single-column layout for phones — same data, far less vertical space:
+  // one row (protein + zone + button), a thin progress bar, one small detail line.
+  var mobileHtml =
+    '<div class="sb-mobile" style="max-width:1280px; margin:0 auto; padding:9px 16px 10px;">' +
+      '<div style="display:flex; align-items:center; justify-content:space-between; gap:10px;">' +
+        '<div style="display:flex; align-items:baseline; gap:7px; min-width:0;">' +
+          '<span style="font-family:var(--cond); font-size:26px; font-weight:700; color:' + zone.color + '; line-height:1;">' + st.protein + 'g</span>' +
+          '<span style="font-family:var(--mono); font-size:9.5px; letter-spacing:0.04em; text-transform:uppercase; color:var(--text3); white-space:nowrap;">' + target.label + ' · ' + esc(zone.label) + '</span>' +
+        '</div>' +
+        '<button data-action="toggle-tray" style="cursor:pointer; flex:0 0 auto; background:var(--lime); border:none; border-radius:8px; padding:8px 13px; font-family:var(--cond); font-size:14px; font-weight:700; text-transform:uppercase; letter-spacing:0.02em; color:#101214;">' + trayLabel + ' <span style="font-family:var(--mono); font-size:10px;">(' + state.dayLog.length + ')</span></button>' +
+      '</div>' +
+      '<div style="position:relative; height:5px; background:var(--card2); border-radius:20px; overflow:hidden; margin-top:7px;">' +
+        '<div style="position:absolute; top:-2px; bottom:-2px; width:2px; left:' + floorPct + '; background:var(--red); opacity:0.55;"></div>' +
+        '<div style="height:100%; width:' + fillPct + '; background:' + zone.color + '; border-radius:20px; transition:width 0.3s ease;"></div>' +
+      '</div>' +
+      '<div style="display:flex; justify-content:space-between; gap:10px; margin-top:5px; font-family:var(--mono); font-size:10px; color:var(--text3); white-space:nowrap;">' +
+        '<span style="overflow:hidden; text-overflow:ellipsis;">' +
+          '<span style="color:' + calZone.color + ';">' + st.calories + 'cal</span> · ' +
+          '<span style="color:' + carbZone.color + ';">' + st.carbs + 'gC</span> · ' +
+          '<span style="color:' + fatZone.color + ';">' + st.fat + 'gF</span>' +
+          '<span style="color:' + satColor + ';"> (' + st.satFat + ' sat)</span>' +
+        '</span>' +
+      '</div>' +
+    '</div>';
+
+  $("scoreboardContainer").innerHTML = desktopHtml + mobileHtml;
+  renderMacrosPanel();
+}
+
+// ---------------------------------------------------------------------
+// Actions
+// ---------------------------------------------------------------------
+
+function toggleDrive() {
+  state.showDrive = !state.showDrive;
+  renderHeader();
+  renderPanels();
+  if (state.showDrive) { var el = $("panelsContainer"); if (el) el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+}
+
+function clearDay() { state.dayLog = []; saveDayLog(); state.trayOpen = false; renderScoreboard(); renderTray(); }
+function toggleTray() { state.trayOpen = !state.trayOpen; renderScoreboard(); renderTray(); }
+
+// ---------------------------------------------------------------------
+// Event delegation
+// ---------------------------------------------------------------------
+
+document.addEventListener("click", function (e) {
+  var el = e.target.closest("[data-action]");
+  if (!el) return;
+  var action = el.getAttribute("data-action");
+  var id = el.getAttribute("data-id");
+  switch (action) {
+    case "toggle-drive": toggleDrive(); break;
+    case "clear-day": clearDay(); break;
+    case "daylog-step": dayLogStep(el.getAttribute("data-uid"), parseInt(el.getAttribute("data-dir"), 10)); break;
+    case "daylog-remove": dayLogRemove(el.getAttribute("data-uid")); break;
+    case "toggle-tray": toggleTray(); break;
+    case "ack-disclaimer": ackDisclaimer(); break;
+    case "toggle-macros": toggleMacros(); break;
+    case "calc-add-food": calcAddFood(el.getAttribute("data-food-id")); break;
+    case "calc-set-weight-unit": calcSetWeightUnit(el.getAttribute("data-unit")); break;
+    case "calc-toggle-save-box": calcToggleSaveBox(); break;
+    case "calc-save-meal": calcSaveMeal(); break;
+    case "calc-load-saved": calcLoadSavedMeal(el.getAttribute("data-uid")); break;
+    case "calc-delete-saved": calcDeleteSavedMeal(el.getAttribute("data-uid")); break;
+  }
+});
+
+document.addEventListener("input", function (e) {
+  if (e.target.id === "calcSearchInput") calcOnSearch(e.target.value);
+  if (e.target.id === "calcSaveNameInput") calcSaveNameInput(e.target.value);
+});
+
+document.addEventListener("change", function (e) {
+  var el = e.target.closest("[data-action]");
+  if (!el) return;
+  var action = el.getAttribute("data-action");
+  if (action === "daylog-set-slot") dayLogSetSlot(el.getAttribute("data-uid"), el.value || null);
+  if (action === "calc-set-add-slot") calcSetAddSlot(el.value);
+});
+
+// ---------------------------------------------------------------------
+// Shell / initial mount
+// ---------------------------------------------------------------------
+
+function mountShell() {
+  var app = $("app");
+  app.innerHTML =
+    '<div id="disclaimerContainer"></div>' +
+    '<header style="max-width:1280px; margin:0 auto; padding:48px 32px 12px;">' +
+      '<div style="font-family:var(--mono); font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:var(--lime); margin-bottom:16px; font-weight:600;">Recomp Fuel · 185g+ protein / day</div>' +
+      '<h1 style="font-family:var(--cond); font-size:76px; line-height:0.9; font-weight:700; text-transform:uppercase; letter-spacing:0.005em; margin:0; color:var(--text);">Meal Plan</h1>' +
+      '<p style="font-size:17px; line-height:1.6; color:var(--text2); max-width:640px; margin:20px 0 0;">A food-by-food calorie and macro tracker for body recomposition. Search the database below, weigh it out, and log it — everything you eat sums into the scoreboard at the bottom of the screen.</p>' +
+      '<div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-top:22px;">' +
+        '<span id="totalMealsBadge" style="font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#101214; background:var(--lime); padding:6px 12px; border-radius:6px; font-weight:600; box-shadow:0 2px 8px rgba(82,115,74,0.18);"></span>' +
+      '</div>' +
+      '<div id="headerButtons" style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;"></div>' +
+    '</header>' +
+
+    '<div id="panelsContainer"></div>' +
+    '<div id="macrosContainer"></div>' +
+    '<div id="calculatorContainer"></div>' +
+
+    '<div id="trayContainer"></div>' +
+
+    '<div id="scoreboardContainer" style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#ffffff; border-top:1px solid var(--border); padding-bottom:env(safe-area-inset-bottom, 0px);"></div>';
+}
+
+function renderAll() {
+  renderDisclaimer();
+  renderHeader();
+  renderPanels();
+  renderCalculatorShell();
+  renderScoreboard();
+  renderTray();
+}
+
+loadPersisted();
+mountShell();
+renderAll();
+
+})();
+
+</script>
+</body>
+</html>
