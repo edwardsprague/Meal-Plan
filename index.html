@@ -338,6 +338,7 @@ var CALC_FOODS = [
   { id: "bread-wg", name: "Whole-Grain Bread", category: "Carbs", unit: "count", protein: 4, fat: 1, satFat: 0.2, carbs: 12 },
   { id: "tortilla-hp", name: "High-Protein Tortilla", category: "Carbs", unit: "count", protein: 9, fat: 3, satFat: 0.5, carbs: 15 },
   { id: "dkb-21-grains", name: "Dave's Killer Bread (21 Whole Grains & Seeds)", category: "Carbs", unit: "count", unitLabel: "slice", protein: 5, fat: 2, satFat: 0, carbs: 22, calories: 120, note: "Label-confirmed (HEB, 2026): 120 cal, 5g protein, 2g fat, 0g sat fat, 22g carbs per slice." },
+  { id: "kroger-hotdog-bun", name: "Kroger White Hot Dog Bun", category: "Carbs", unit: "count", unitLabel: "bun", protein: 3, fat: 1, satFat: 0, carbs: 21, calories: 100, note: "Label-confirmed (Kroger, 2026): 100 cal, 3g protein, 1g fat, 0g sat, 21g carb per bun (39g)." },
   { id: "dkb-thin-sliced", name: "Dave's Killer Bread, Thin-Sliced", category: "Carbs", unit: "count", unitLabel: "slice", protein: 3, fat: 1, satFat: 0.2, carbs: 12, calories: 70, note: "Label: 70 cal, 3g fiber per slice — no onion" },
   { id: "bonne-maman-four-fruits", name: "Bonne Maman Four Fruits Preserves", category: "Carbs", unit: "count", unitLabel: "tbsp", protein: 0, fat: 0, satFat: 0, carbs: 13, calories: 50 },
 
@@ -524,7 +525,9 @@ var CALC_FOODS = [
   { id: "shake-water-collagen", name: "Protein Shake (Water + Collagen)", category: "Presets", unit: "count", unitLabel: "shake", protein: 10, fat: 0, satFat: 0, carbs: 0,
     note: "Water + 1 scoop collagen peptides" },
   { id: "taylor-farms-creamy-italian-kit", name: "Taylor Farms Creamy Italian Chopped Kit (as prepared)", category: "Presets", unit: "count", unitLabel: "1 cup (100g)", protein: 4, fat: 15, satFat: 3, carbs: 10, calories: 190,
-    note: "Full kit as prepared — green/red cabbage, romaine, kale, carrot, croutons, parmesan/asiago/romano crumbles, creamy Italian dressing. ~3 servings per 11oz bag." }
+    note: "Full kit as prepared — green/red cabbage, romaine, kale, carrot, croutons, parmesan/asiago/romano crumbles, creamy Italian dressing. ~3 servings per 11oz bag." },
+  { id: "hormel-chili-beans", name: "Hormel Chili with Beans", category: "Presets", unit: "count", unitLabel: "1 cup (247g)", protein: 15, fat: 10, satFat: 4, carbs: 31, calories: 270,
+    note: "Label-confirmed (Hormel, 2026): 270 cal, 15g protein, 10g fat (4g sat), 31g carb, 7g fiber per 1 cup (247g) serving." }
 ];
 // Generic ingredients get calories derived from macros (P*4 + C*4 + F*9) — the
 // standard approach, since there's no single "real" label behind a generic
